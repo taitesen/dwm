@@ -1,0 +1,21 @@
+# Profile file. Runs on login. Environmenta variables are set here
+
+# Add `~/.local/bin` to $PATH
+export PATH="$PATH:$HOME/.local/bin/:$HOME/local/bin/personal/:$HOME/usr/share/"
+
+# Default programs
+export TERMINAL="st"
+export EDITOR="nvim"
+export BROWSER="qutebrowser"
+export READER="zathura"
+
+export ZDOTDIR="$HOME/.config/zsh"
+
+# MPD daemon start (if no other user instance exists)
+# [ ! -s ~/.config/mpd/pid ] && mpd
+
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+  exec startx &>/dev/null
+fi
+
+feh --bg-fill ~/Pictures/wallpapers/5.*
