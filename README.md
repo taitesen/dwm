@@ -20,5 +20,5 @@ chmod +x install.sh
 
 ---
 ## Important Keybinds
-Mod key is Win
-Mod + Shift + Enter = Terminal
+- Default <kbd>Mod Key</kbd> is <kbd>Win</kbd>
+- <kbd>Mod Key + Shift + Enter </kbd> opens Terminal
