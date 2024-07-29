@@ -10,3 +10,15 @@ https://raw.githubusercontent.com/taitesen/dwm/master/install.sh
 chmod +x install.sh
 ./install.sh
 ```
+
+---
+![Screen shot](screenshot/FullScreenshot.png)
+
+![qutebroser](screenshot/qb.png)
+
+![random screnshot](screenshot/yaaa.png)
+
+---
+## Important Keybinds
+Mod key is Win
+Mod + Shift + Enter = Terminal
