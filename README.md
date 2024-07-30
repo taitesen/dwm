@@ -5,8 +5,15 @@ This install script is composed of moving files around only. It was design for p
 
 Tih ve leh lawk loh chuan!!
 
+- With wget
 ```sh
-https://raw.githubusercontent.com/taitesen/dwm/master/install.sh
+wget -c https://raw.githubusercontent.com/taitesen/dwm/master/install.sh
+chmod +x install.sh
+./install.sh
+```
+- With curl
+```sh
+curl -C - -O https://raw.githubusercontent.com/taitesen/dwm/master/install.sh
 chmod +x install.sh
 ./install.sh
 ```
