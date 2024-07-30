@@ -18,4 +18,3 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   exec startx &>/dev/null
 fi
 
-feh --bg-fill ~/Pictures/wallpapers/5.*

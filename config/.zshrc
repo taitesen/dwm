@@ -25,5 +25,7 @@ vdown(){
     wpctl set-volume @DEFAULT_AUDIO_SINK@ "$1%-"
 }
 
+bindkey -v
+
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
