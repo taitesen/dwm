@@ -18,6 +18,11 @@ chmod +x install.sh
 ./install.sh
 ```
 
+- Dont try this
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/taitesen/dwm/master/install.sh)"
+```
+
 ---
 ![Screen shot](screenshot/FullScreenshot.png)
 
