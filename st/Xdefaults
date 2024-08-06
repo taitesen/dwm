@@ -6,7 +6,7 @@ st.alphaOffset: 0.9
 st.font: JetBrainsMono Nerd Font-18;
 
 st.termname: st-256color
-st.borderpx: 0
+st.borderpx: 30
 
 !! Set the background, foreground and cursor colors as below:
 

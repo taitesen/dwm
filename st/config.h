@@ -4,7 +4,7 @@ static char *font =
 static char *font2[] = {
     "LiterationMono Nerd Font:pixelsize=10:antialias=true:autohint=true"};
 
-static unsigned int borderpx = 100;
+static int borderpx = 16;
 
 static char *shell = "/bin/sh";
 char *utmp = NULL;
@@ -266,6 +266,8 @@ static Shortcut shortcuts[] = {
     {TERMMOD,      XK_Down,       zoom,           {.f  =  -1}},
     {TERMMOD,      XK_K,          zoom,           {.f  =  +1}},
     {TERMMOD,      XK_J,          zoom,           {.f  =  -1}},
+    {MODKEY,       XK_period,     zoom,           {.f  =  +1}},
+    {MODKEY,       XK_comma,      zoom,           {.f  =  -1}},
     {TERMMOD,      XK_U,          zoom,           {.f  =  +2}},
     {TERMMOD,      XK_D,          zoom,           {.f  =  -2}},
     {MODKEY,       XK_l,          externalpipe,   {.v  =  openurlcmd}},
