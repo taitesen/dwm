@@ -1,9 +1,9 @@
 !! Transparency (0-1):
-st.alpha: 0.9
-st.alphaOffset: 0.3
+st.alpha: 0.70
+st.alphaOffset: 0.9
 
 !! Set a default font and font size as below:
-st.font: FiraCode Nerd Font-18;
+st.font: JetBrainsMono Nerd Font-18;
 
 st.termname: st-256color
 st.borderpx: 0
