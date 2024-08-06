@@ -6,7 +6,7 @@ sudo pacman -Syu --noconfirm --needed base-devel
 # Update the system
 sudo pacamn -Syu --needed --noconfirm xorg-xinit xorg-server xorg-xrandr \
     xorg-xsetroot libxft libxinerama firefox-developer-edition feh fastfetch \
-    picom neovim zsh zsh-syntax-highlighting curl git wget unzip fzf nsxiv \
+    neovim zsh zsh-syntax-highlighting curl git wget unzip fzf nsxiv \
     man-db mpc mpd mpv ncmpcpp python3 python-pip python-pynvim npm \
     ttf-font-awesome ttf-jetbrains-mono-nerd ttf-firacode-nerd zathura \
     zathura-pdf-mupdf tmux meson ninja yazi flameshot ffmpeg yt-dlp eza \
@@ -26,7 +26,7 @@ cd ..
 rm -rf paru
 
 # Installing additional softwares via paru
-paru -S ueberzugpp vesktop-bin oh-my-posh-bin --noconfirm
+paru -S ueberzugpp vesktop-bin oh-my-posh-bin picom-git --noconfirm
 
 # Cloning my dwm repo
 mkdir -p $HOME/.local/ && cd $HOME/.local/
