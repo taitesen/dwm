@@ -33,4 +33,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/taitesen/dwm/master/instal
 ---
 ## Important Keybinds
 - Default <kbd>Mod Key</kbd> is <kbd>Win</kbd>
-- <kbd>Mod Key + Shift + Enter </kbd> opens Terminal
+- <kbd>Mod Key + Enter </kbd> spawn Terminal
+- <kbd>Mod Key + p </kbd> spawn dmenu
+- <kbd>Mod Key + . </kbd> next window tag
+- <kbd>Mod Key + , </kbd> previous window tag
+

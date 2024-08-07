@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 # Update function
-sudo pacman -Syu --noconfirm --needed base-devel
+pacman -Syu --noconfirm --needed base-devel
 
 # Update the system
-sudo pacamn -Syu --needed --noconfirm xorg-xinit xorg-server xorg-xrandr \
+pacamn -Syu --needed --noconfirm xorg-xinit xorg-server xorg-xrandr \
     xorg-xsetroot libxft libxinerama firefox-developer-edition feh fastfetch \
     neovim zsh zsh-syntax-highlighting curl git wget unzip fzf nsxiv \
     man-db mpc mpd mpv ncmpcpp python3 python-pip python-pynvim npm \
@@ -15,15 +15,18 @@ sudo pacamn -Syu --needed --noconfirm xorg-xinit xorg-server xorg-xrandr \
 
 # Create Directories
 cd "$HOME"
-mkdir Documents Downloads Pictures Videos Music Workspaces Vaults
+mkdir -p Documents Downloads Pictures Videos Music Workspaces Vaults
 
 # Installing paru AUR helper
-cd Downloads
-git clone https://aur.archlinux.org/paru.git
-cd paru
-makepkg -si --noconfirm
-cd ..
-rm -rf paru
+if ! command -v paru &> /dev/null/
+then
+    cd Downloads
+    git clone https://aur.archlinux.org/paru.git
+    cd paru
+    makepkg -si --noconfirm
+    cd ..
+    rm -rf paru
+fi
 
 # Installing additional softwares via paru
 paru -S ueberzugpp vesktop-bin oh-my-posh-bin picom-git --noconfirm
