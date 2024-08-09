@@ -12,17 +12,9 @@
     },
     "modules": [
         {
-            "key": "╭───────────╮",
-            "type": "custom"
-        },
-        {
-            "key": "│ {#31} user    {#keys}│",
+            "key": " {#31} user    {#keys}",
             "type": "title",
             "format": "{user-name}"
         },
-        {
-            "key": "╰───────────╯",
-            "type": "custom"
-        }
     ]
 }
