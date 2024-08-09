@@ -35,7 +35,7 @@ static const unsigned int alphas[][3] = {
 /* Brightness*/
 
 /* tagging */
-static const char *tags[] = {"", "", "", "", "", "", "", "", ""};
+static const char *tags[] = {"", "", "", "", "", "", "", "", ""};
 
 static const Rule rules[] = {
     /* xprop(1):
@@ -44,9 +44,9 @@ static const Rule rules[] = {
      */
     /* class                  instance  title   tags mask   isfloating  monitor */
 {  "Gimp",                    NULL,     NULL,   0,          1,          -1},
+{  "Thunar",                  NULL,     NULL,   1 << 2,     0,          -1},
 {  "mpv",                     NULL,     NULL,   1 << 3,     0,          -1},
 {  "spotify",                 NULL,     NULL,   1 << 4,     0,          -1},
-{  "thunar",                  NULL,     NULL,   1 << 5,     0,          -1},
 {  "thunderbird",             NULL,     NULL,   1 << 6,     0,          -1},
 {  "obs",                     NULL,     NULL,   1 << 7,     0,          -1},
 {  "vesktop",                 NULL,     NULL,   1 << 8,     0,          -1},
