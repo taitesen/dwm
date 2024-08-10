@@ -3,6 +3,7 @@ eval "$(fzf --zsh)"
 # eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 eval "$(starship init zsh)"
 
+alias clear='clear && fastfetch --config /home/taitesen/.config/fastfetch/config.duata.jsonc'
 alias almighty='git'
 alias l='eza -lh --git --no-time --no-filesize --group-directories-first --color=always --icons=always  --no-quotes'
 alias ld='eza -D --color=always --icons=always --no-quotes'
