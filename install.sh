@@ -20,16 +20,19 @@ mkdir -p Documents Downloads Pictures Videos Music Workspaces Vaults
 # Installing paru AUR helper
 if ! command -v paru &> /dev/null/
 then
-    cd Downloads
+    cd /tmp/
     git clone https://aur.archlinux.org/paru.git
     cd paru
     makepkg -si --noconfirm
-    cd ..
-    rm -rf paru
 fi
 
 # Installing additional softwares via paru
-paru -S ueberzugpp vesktop-bin oh-my-posh-bin picom-git --noconfirm
+paru -S \
+    ueberzugpp \
+    vesktop-bin \
+    picom-git \
+    --noconfirm
+    # oh-my-posh-bin \
 
 # Cloning my dwm repo
 mkdir -p $HOME/.local/ && cd $HOME/.local/
