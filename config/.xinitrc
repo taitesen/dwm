@@ -37,7 +37,7 @@ fi
 
 setxkbmap us &
 xrdb ~/.local/src/st/Xdefaults &
-feh --bg-fill ~/Pictures/wallpapers/5.* &
+feh --bg-max ~/Pictures/wallpapers/8.* &
 picom -f &
 dwmblocks &
 xset r rate 300 60 &
