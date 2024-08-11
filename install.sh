@@ -4,7 +4,7 @@
 pacman -Syu --noconfirm --needed base-devel
 
 # Update the system
-pacamn -Syu --needed --noconfirm xorg-xinit xorg-server xorg-xrandr \
+pacman -Syu --needed --noconfirm xorg-xinit xorg-server xorg-xrandr \
     xorg-xsetroot libxft libxinerama firefox-developer-edition feh fastfetch \
     neovim zsh zsh-syntax-highlighting curl git wget unzip fzf nsxiv \
     man-db mpc mpd mpv ncmpcpp python3 python-pip python-pynvim npm \
@@ -18,7 +18,7 @@ cd "$HOME"
 mkdir -p Documents Downloads Pictures Videos Music Workspaces Vaults
 
 # Installing paru AUR helper
-if ! command -v paru &> /dev/null/
+if ! command -v paru &> /dev/null
 then
     cd /tmp/
     git clone https://aur.archlinux.org/paru.git
@@ -32,7 +32,6 @@ paru -S \
     vesktop-bin \
     picom-git \
     --noconfirm
-    # oh-my-posh-bin \
 
 # Cloning my dwm repo
 mkdir -p $HOME/.local/ && cd $HOME/.local/
@@ -75,7 +74,7 @@ git clone https://github.com/taitesen/nvim.git $HOME/.config/nvim/
 echo -e "Reboot now? [y/n]: \c"
 read RESTART_CHOICE
 REFINE_CHOICE=$(echo $RESTART_CHOICE | tr '[:upper:]' '[:lower:]')
-if [[ REFINE_CHOICE == "y" ]];then
+if [[ $REFINE_CHOICE == "y" ]];then
     systemctl reboot
 else
     echo "INSTALLATION FINISH. REBOOT TO SEE CHANGES."
