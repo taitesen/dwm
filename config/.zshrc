@@ -13,7 +13,7 @@ alias ls='eza -x --color=always --icons=always --no-quotes'
 alias la='ls -ad .?* --no-quotes --group-directories-first'
 alias tree='lt --no-quotes'
 
-clear && fastfetch --config /home/taitesen/.config/fastfetch/config.duata.jsonc
+clear
 
 bup(){
     brightnessctl set "$1%+"
