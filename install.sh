@@ -8,10 +8,10 @@ pacman -Syu --needed --noconfirm xorg-xinit xorg-server xorg-xrandr \
     xorg-xsetroot libxft libxinerama firefox-developer-edition feh fastfetch \
     neovim zsh zsh-syntax-highlighting curl git wget unzip fzf nsxiv \
     man-db mpc mpd mpv ncmpcpp python3 python-pip python-pynvim npm \
-    ttf-font-awesome ttf-jetbrains-mono-nerd ttf-firacode-nerd zathura \
-    zathura-pdf-mupdf tmux meson ninja yazi flameshot ffmpeg yt-dlp eza \
-    zoxide fd ripgrep htop openssl openssh python-isort bat brightnessctl \
-    qutebrowser xclip xsel
+    ttf-font-awesome ttf-terminus-nerd  ttf-jetbrains-mono-nerd \
+    ttf-firacode-nerd zathura zathura-pdf-mupdf tmux meson ninja yazi \
+    flameshot ffmpeg yt-dlp eza zoxide fd ripgrep htop openssl openssh \
+    python-isort bat brightnessctl qutebrowser xclip xsel
 
 # Create Directories
 cd "$HOME"
