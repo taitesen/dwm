@@ -17,6 +17,14 @@ pacman -Syu --needed --noconfirm xorg-xinit xorg-server xorg-xrandr \
 cd "$HOME"
 mkdir -p Documents Downloads Pictures Videos Music Workspaces Vaults
 
+# Changing default shell to zsh
+ZSH_PATH=$(which zsh)
+chsh -s "$ZSH_PATH"
+
+# Installing my neovim config
+mkdir -p $HOME/.config/nvim/
+git clone https://github.com/taitesen/nvim.git $HOME/.config/nvim/
+
 # Installing paru AUR helper
 if ! command -v paru &> /dev/null
 then
@@ -35,7 +43,10 @@ paru -S \
 
 # Cloning my dwm repo
 mkdir -p $HOME/.local/ && cd $HOME/.local/
-git clone https://github.com/taitesen/dwm.git
+if ! git clone https://github.com/taitesen/dwm.git; then
+    echo "Failed to clone dwm repository"
+    exit 1
+fi
 mv dwm/ src/
 
 # Copying config files
@@ -43,32 +54,61 @@ cd src/config/
 cp -r .tmux.conf .xinitrc .zprofile $HOME/
 mkdir -p $HOME/.config/zsh/
 cp -r .zshrc $HOME/.config/zsh/
-cp -r kitty $HOME/.config/
-cp -r ohmyposh $HOME/.config/
+
+config_items=(
+    "fastfetch"
+    "kitty"
+    "ohmyposh"
+    "picom"
+    "qutebrowser"
+    "starship.toml"
+    "vesktop"
+)
+destination="$HOME/.config/"
+for item in "${config_items[@]}"; do
+    cp -r "$item" "$destination"
+done
+
 
 # Installing dwm environment
-cd ../dwm/ && sudo make clean install
-cd ../dmenu/ && sudo make clean install
-cd ../dwmblocks/ && sudo make clean install
-cd ../st/ && sudo make clean install
+dirs=(
+    "dwm"
+    "dmenu"
+    "dwmblocks"
+    "st"
+ )
+for item in "${dirs[@]}"; do
+    if [ -d "../$dirs" ]; then
+        cd "../$dirs" || { echo "Failed to change direcory to ../$dirs"; exit 1; }
+        sudo make clean install || { echo "Failed to make clean install in $dir"; exit 1; }
+    else
+        echo "$dirs does not exits"
+    fi
+done
+
 
 # Copying scripts to local bin
 cd ../script/
 mkdir -p $HOME/.local/bin/
-cp -r battery clock heiham internet nettraf tmux-sessionizer volume $HOME/.local/bin/
+scripts=(
+    "battery"
+    "clock"
+    "heiham"
+    "internet"
+    "nettraf"
+    "tmux-sessionizer"
+    "volume"
+)
+dests="$HOME/.local/bin/"
+for item in "${scripts[@]}"; do
+    cp -r "$item" "$dests"
+done
 
 # Moving wallpapers folders
 cd ../
 mv wallpapers/ $HOME/Pictures/
 cd "$HOME"
 
-# Changing default shell to zsh
-ZSH_PATH=$(which zsh)
-chsh -s "$ZSH_PATH"
-
-# Installing my neovim config
-mkdir -p $HOME/.config/nvim/
-git clone https://github.com/taitesen/nvim.git $HOME/.config/nvim/
 
 # Post-Installation
 echo -e "Reboot now? [y/n]: \c"
