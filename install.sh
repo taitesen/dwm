@@ -78,11 +78,11 @@ dirs=(
     "st"
  )
 for item in "${dirs[@]}"; do
-    if [ -d "../$dirs" ]; then
-        cd "../$dirs" || { echo "Failed to change direcory to ../$dirs"; exit 1; }
-        sudo make clean install || { echo "Failed to make clean install in $dir"; exit 1; }
+    if [ -d "../$item" ]; then
+        cd "../$item" || { echo "Failed to change direcory to ../$item"; exit 1; }
+        sudo make clean install || { echo "Failed to make clean install in $item"; exit 1; }
     else
-        echo "$dirs does not exits"
+        echo "$item does not exits"
     fi
 done
 
