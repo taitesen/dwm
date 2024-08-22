@@ -14,6 +14,8 @@ export ZDOTDIR="$HOME/.config/zsh"
 # MPD daemon start (if no other user instance exists)
 # [ ! -s ~/.config/mpd/pid ] && mpd
 
+xrdb /home/taitesen/.local/src/st/Xdefaults
+
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   exec startx &>/dev/null
 fi
