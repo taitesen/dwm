@@ -68,13 +68,13 @@ static const struct arg args[] = {
 
 	/*{ netspeed_rx,        "^c#6b6b6b^ %s",        "wlo1" },*/
 	/*{ netspeed_tx,        "^c#6b6b6b^ %s ",       "wlo1" },*/
-	{ run_command,        "^c#6b6b6b^%s",          "sh nettraf" },
-	{ run_command,        "^c#6b6b6b^%s",          "sh battery" },
+	{ run_command,        "%s",          "sh nettraf" },
+	{ run_command,        "%s",          "sh battery" },
 	/*{ battery_state,      "^c#6b6b6b^%s",          "BAT0" },*/
 	/*{ battery_perc,       "^c#6b6b6b^%s ",         "BAT0" },*/
 	/*{ temp,               "^c#6b6b6b^ %s ",       "cat /sys/class/thermal/thermal_zone0/subsystem/thermal_zone7/temp" },*/
-	{ ram_used,           "^c#6b6b6b^ 󰍛 %s ",       NULL },
-	{ datetime,           "^c#6b6b6b^󰥔 %s ",       "%H:%M %a %d %b" },
-	{ run_command,        "^c#6b6b6b^%s",          "sh ~/.local/bin/net.sh" },
-	{ wifi_perc,          "^c#6b6b6b^%s",          "wlo1" },
+	{ ram_used,           " 󰍛 %s ",       NULL },
+	{ datetime,           "󰥔 %s ",       "%H:%M %a %d %b" },
+	{ run_command,        "%s",          "sh ~/.local/bin/net.sh" },
+	{ wifi_perc,          "%s",          "wlo1" },
 };
