@@ -6,8 +6,8 @@
 
 case $BLOCK_BUTTON in
 	1) setsid -f "$TERMINAL" -e bmon ;;
-	3) notify-send "🌐 Network traffic module" " : Traffic received
- : Traffic transmitted" ;;
+	3) notify-send "🌐 Network traffic module" ":Traffic received
+:Traffic transmitted" ;;
 	6) setsid -f "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
@@ -26,4 +26,4 @@ update() {
 rx=$(update /sys/class/net/[ew]*/statistics/rx_bytes)
 tx=$(update /sys/class/net/[ew]*/statistics/tx_bytes)
 
-printf "  %4sB    %4sB\\n" $(numfmt --to=iec $rx $tx)
+printf " %4sB  %4sB\\n" $(numfmt --to=iec $rx $tx)
