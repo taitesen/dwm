@@ -28,6 +28,6 @@ st.borderpx: 30
 *.color14: #ebbcba
 *.color15: #e0def4
 *.background: #000000
-*.foreground: #aaaaaa
+*.foreground: #6b6b6b
 *.cursorColor: #eabbb9
 
