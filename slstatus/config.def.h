@@ -66,8 +66,8 @@ static const char unknown_str[] = "";
 static const struct arg args[] = {
 	/* function             format                          argument */
 
-	{ netspeed_rx,        " %s",        "wlo1" },
-	{ netspeed_tx,        " %s",       "wlo1" },
+	{ netspeed_rx,        "  %s",        "wlo1" },
+	{ netspeed_tx,        "  %s",       "wlo1" },
 	/*{ run_command,        "%s",          "sh nettraf" },*/
 	{ run_command,        "%s",          "sh battery" },
 	/*{ battery_state,      "^c#6b6b6b^%s",          "BAT0" },*/
