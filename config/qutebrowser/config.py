@@ -45,7 +45,7 @@ config.set(
 
 c.content.javascript.clipboard = "access-paste"
 
-c.hints.border = "1px solid #FFFFFF"
+c.hints.border = "1px solid #000000"
 
 c.scrolling.bar = "never"
 
@@ -53,21 +53,21 @@ c.scrolling.smooth = True
 
 c.statusbar.show = "in-mode"
 
-c.tabs.show = "switching"
+c.tabs.show = "always"
 
-c.colors.completion.fg = "#a6adc8"
+c.colors.completion.fg = "#6b6b6b"
 
-c.colors.completion.odd.bg = "#181825"
+c.colors.completion.odd.bg = "#000000"
 
-c.colors.completion.even.bg = "#181825"
+c.colors.completion.even.bg = "#000000"
 
 c.colors.completion.category.fg = "#a6e3a1"
 
-c.colors.completion.category.bg = "#1e1e2e"
+c.colors.completion.category.bg = "#000000"
 
-c.colors.completion.category.border.top = "#9399b2"
+c.colors.completion.category.border.top = "#000000"
 
-c.colors.completion.category.border.bottom = "#181825"
+c.colors.completion.category.border.bottom = "#000000"
 
 c.colors.completion.item.selected.fg = "#cdd6f4"
 
@@ -77,21 +77,21 @@ c.colors.completion.item.selected.border.top = "#585b70"
 
 c.colors.completion.item.selected.border.bottom = "#585b70"
 
-c.colors.completion.item.selected.match.fg = "#f5e0dc"
+c.colors.completion.item.selected.match.fg = "#ebbcba"
 
 c.colors.completion.match.fg = "#cdd6f4"
 
-c.colors.completion.scrollbar.fg = "#585b70"
+c.colors.completion.scrollbar.fg = "#ebbcba"
 
-c.colors.completion.scrollbar.bg = "#11111b"
+c.colors.completion.scrollbar.bg = "#000000"
 
-c.colors.contextmenu.menu.bg = "#1e1e2e"
+c.colors.contextmenu.menu.bg = "#000000"
 
-c.colors.contextmenu.menu.fg = "#cdd6f4"
+c.colors.contextmenu.menu.fg = "#ebbcba"
 
-c.colors.contextmenu.selected.bg = "#6c7086"
+c.colors.contextmenu.selected.bg = "#ebbcba"
 
-c.colors.contextmenu.selected.fg = "#f5e0dc"
+c.colors.contextmenu.selected.fg = "#000000"
 
 c.colors.contextmenu.disabled.bg = "#181825"
 
@@ -115,9 +115,9 @@ c.colors.downloads.error.fg = "#f38ba8"
 
 c.colors.downloads.error.bg = "#1e1e2e"
 
-c.colors.hints.fg = "#181825"
+c.colors.hints.bg = "#181825"
 
-c.colors.hints.bg = "#fab387"
+c.colors.hints.fg = "#ebbcba"
 
 c.colors.hints.match.fg = "#bac2de"
 
@@ -139,13 +139,13 @@ c.colors.messages.warning.bg = "#6c7086"
 
 c.colors.messages.warning.border = "#181825"
 
-c.colors.messages.info.fg = "#cdd6f4"
+c.colors.messages.info.fg = "#ebbcba"
 
-c.colors.messages.info.bg = "#6c7086"
+c.colors.messages.info.bg = "#000000"
 
 c.colors.messages.info.border = "#181825"
 
-c.colors.prompts.fg = "#cdd6f4"
+c.colors.prompts.fg = "#ebbcba"
 
 c.colors.prompts.border = "1px solid #6c7086"
 
@@ -155,13 +155,13 @@ c.colors.prompts.selected.fg = "#f5e0dc"
 
 c.colors.prompts.selected.bg = "#585b70"
 
-c.colors.statusbar.normal.fg = "#cdd6f4"
+c.colors.statusbar.normal.fg = "#ebbcba"
 
-c.colors.statusbar.normal.bg = "#1e1e2e"
+c.colors.statusbar.normal.bg = "#000000"
 
-c.colors.statusbar.insert.fg = "#f5e0dc"
+c.colors.statusbar.insert.fg = "#ebbcba"
 
-c.colors.statusbar.insert.bg = "#11111b"
+c.colors.statusbar.insert.bg = "#000000"
 
 c.colors.statusbar.passthrough.fg = "#fab387"
 
@@ -173,11 +173,11 @@ c.colors.statusbar.private.bg = "#181825"
 
 # Foreground color of the statusbar in command mode.
 # Type: QssColor
-c.colors.statusbar.command.fg = "#cdd6f4"
+c.colors.statusbar.command.fg = "#ebbcba"
 
 # Background color of the statusbar in command mode.
 # Type: QssColor
-c.colors.statusbar.command.bg = "#1e1e2e"
+c.colors.statusbar.command.bg = "#000000"
 
 # Foreground color of the statusbar in private browsing + command mode.
 # Type: QssColor
@@ -235,7 +235,7 @@ c.colors.statusbar.url.warn.fg = "#f9e2af"
 
 # Background color of the tab bar.
 # Type: QssColor
-c.colors.tabs.bar.bg = "#11111b"
+c.colors.tabs.bar.bg = "#000000"
 
 # Color for the tab indicator on errors.
 # Type: QtColor
@@ -252,40 +252,40 @@ c.colors.tabs.indicator.system = "none"
 
 # Foreground color of unselected odd tabs.
 # Type: QtColor
-c.colors.tabs.odd.fg = "#9399b2"
+c.colors.tabs.odd.fg = "#ebbcba"
 
 # Background color of unselected odd tabs.
 # Type: QtColor
-c.colors.tabs.odd.bg = "#45475a"
+c.colors.tabs.odd.bg = "#3b3b3b"
 
 # Foreground color of unselected even tabs.
 # Type: QtColor
-c.colors.tabs.even.fg = "#9399b2"
+c.colors.tabs.even.fg = "#ebbcba"
 
 # Background color of unselected even tabs.
 # Type: QtColor
-c.colors.tabs.even.bg = "#585b70"
+c.colors.tabs.even.bg = "#3b3b3b"
 
 # Foreground color of selected odd tabs.
 # Type: QtColor
-c.colors.tabs.selected.odd.fg = "#cdd6f4"
+c.colors.tabs.selected.odd.fg = "#ebbcba"
 
 # Background color of selected odd tabs.
 # Type: QtColor
-c.colors.tabs.selected.odd.bg = "#1e1e2e"
+c.colors.tabs.selected.odd.bg = "#000000"
 
 # Foreground color of selected even tabs.
 # Type: QtColor
-c.colors.tabs.selected.even.fg = "#cdd6f4"
+c.colors.tabs.selected.even.fg = "#ebbcba"
 
 # Background color of selected even tabs.
 # Type: QtColor
-c.colors.tabs.selected.even.bg = "#1e1e2e"
+c.colors.tabs.selected.even.bg = "#000000"
 
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # Type: QtColor
-c.colors.webpage.bg = "#1e1e2e"
+c.colors.webpage.bg = "#000000"
 
 c.colors.webpage.darkmode.enabled = True
 
