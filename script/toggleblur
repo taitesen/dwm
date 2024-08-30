@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+filename="/home/taitesen/.config/picom/picom.conf"
+
+# Check if the files exist or not
+if [ ! -f "$filename" ];then
+    echo "File does not exit: $filename"
+    exit 1
+fi
+
+# check if the file has 104 lines, since blur option is at line 104 in picom.conf
+if [ $(wc -l < "$filename") -lt 104 ]; then
+    echo "There is no line 104."
+    exit 1
+fi
+
+# Check if line 104 is commented
+if sed -n '104p' "$filename" | grep -q '^#'; then
+    # Uncomment line 104
+    sed -i '104 s/^#//' "$filename"
+else
+    # Comment line 104
+    sed -i '104 s/^/#/' "$filename"
+fi
+
+
