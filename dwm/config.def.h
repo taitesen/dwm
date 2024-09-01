@@ -116,8 +116,8 @@ static const Key keys[] = {
 {         MODKEY|ShiftMask,           XK_s,             spawn,           {.v   =   screenshot    }     },
 {         MODKEY|ShiftMask,           XK_b,             spawn,           {.v   =   toggleblur    }     },
 {         MODKEY,                     XK_b,             togglebar,       {0}   },
-{         MODKEY,                     XK_j,             focusstack,      {.i   =   +1            }     },
-{         MODKEY,                     XK_k,             focusstack,      {.i   =   -1            }     },
+{         MODKEY,                     XK_period,        focusstack,      {.i   =   +1            }     },
+{         MODKEY,                     XK_comma,         focusstack,      {.i   =   -1            }     },
 {         MODKEY,                     XK_Up,            incnmaster,      {.i   =   +1            }     },
 {         MODKEY,                     XK_Down,          incnmaster,      {.i   =   -1            }     },
 {         MODKEY,                     XK_bracketleft,   setmfact,        {.f   =   -0.01}        },
@@ -157,10 +157,10 @@ static const Key keys[] = {
 /*{       MODKEY,                     XK_Right,         focusmon,        {.i   =   +1            }     },*/
 /*{       MODKEY|ShiftMask,           XK_Left,          tagmon,          {.i   =   -1            }     },*/
 /*{       MODKEY|ShiftMask,           XK_Right,         tagmon,          {.i   =   +1            }     },*/
-{         MODKEY,                     XK_comma,         viewtoleft,      {0}   },
-{         MODKEY,                     XK_period,        viewtoright,     {0}   },
-{         MODKEY|ShiftMask,           XK_comma,         tagtoleft,       {0}   },
-{         MODKEY|ShiftMask,           XK_period,        tagtoright,      {0}   },
+/*{         MODKEY,                     XK_comma,         viewtoleft,      {0}   },*/
+/*{         MODKEY,                     XK_period,        viewtoright,     {0}   },*/
+/*{         MODKEY|ShiftMask,           XK_comma,         tagtoleft,       {0}   },*/
+/*{         MODKEY|ShiftMask,           XK_period,        tagtoright,      {0}   },*/
           TAGKEYS(                    XK_u,                               0)
           TAGKEYS(                    XK_i,                               1)
           TAGKEYS(                    XK_o,                               2)
