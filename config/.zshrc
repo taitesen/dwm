@@ -12,6 +12,7 @@ alias lt='eza -xT -L2 --group-directories-first --color=always --icons=always  -
 alias ls='eza -x --color=always --icons=always --no-quotes'
 alias la='ls -ad .?* --no-quotes --group-directories-first'
 alias tree='lt --no-quotes'
+alias refresh='xset r rate 300 60'
 
 clear
 
@@ -29,15 +30,5 @@ vup(){
 vdown(){
     wpctl set-volume @DEFAULT_AUDIO_SINK@ "$1%-"
 }
-
-precmd() {
-  if [ ! -z "$BUFFER" ]; then
-    echo
-  fi
-}
-
-bindkey -v
-
-
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
