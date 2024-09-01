@@ -59,20 +59,20 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "[M]",      monocle },
-	{ "[@]",      spiral },
-	{ "[\\]",     dwindle },
-	{ "H[]",      deck },
-	{ "TTT",      bstack },
-	{ "===",      bstackhoriz },
-	{ "HHH",      grid },
-	{ "###",      nrowgrid },
-	{ "---",      horizgrid },
-	{ ":::",      gaplessgrid },
-	{ "|M|",      centeredmaster },
-	{ ">M>",      centeredfloatingmaster },
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "{tile}",      tile },    /* first entry is default */
+	{ "{monocle}",      monocle },
+	{ "{spiral}",      spiral },
+	{ "{dwindle}",     dwindle },
+	{ "{deck}",      deck },
+	{ "{bstack}",      bstack },
+	{ "{bstackhoriz}",      bstackhoriz },
+	{ "{grid}",      grid },
+	{ "{nrowgrid}",      nrowgrid },
+	{ "{horizgrid}",      horizgrid },
+	{ "{gaplessgrid}",      gaplessgrid },
+	{ "{centeredmaster}",      centeredmaster },
+	{ "{centeredmasterfloating}",      centeredfloatingmaster },
+	{ "{nolayout}",      NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
 
@@ -103,8 +103,8 @@ static const Key keys[] = {
 {         MODKEY,                     XK_b,             togglebar,       {0}   },
 {         MODKEY,                     XK_j,             focusstack,      {.i   =   +1            }     },
 {         MODKEY,                     XK_k,             focusstack,      {.i   =   -1            }     },
-/*{       MODKEY,                     XK_i,             incnmaster,      {.i   =   +1            }     },*/
-/*{       MODKEY,                     XK_d,             incnmaster,      {.i   =   -1            }     },*/
+{         MODKEY,                     XK_Up,            incnmaster,      {.i   =   +1            }     },
+{         MODKEY,                     XK_Down,          incnmaster,      {.i   =   -1            }     },
 {         MODKEY,                     XK_bracketleft,   setmfact,        {.f   =   -0.01}        },
 {         MODKEY,                     XK_bracketright,  setmfact,        {.f   =   +0.01}        },
 /*{       MODKEY|ShiftMask,           XK_h,             setcfact,        {.f   =   +0.25}        },*/
