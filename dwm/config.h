@@ -10,11 +10,11 @@ static const unsigned int gappov    = 20;       /* vert outer gap between window
 static       int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int horizpadbar        = 5;        /* horizontal padding for statusbar */
+static const int horizpadbar        = 0;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 15;        /* vertical padding for statusbar */
 static const int vertpad            = 6;       /* vertical padding of bar */
 static const int sidepad            = 20;       /* horizontal padding of bar */
-static const char *fonts[]          = { "Terminess Nerd Font:size=14:antialias=true:autohint=true", "Font Awesome 6 Free:size=14:antialias=true:autohint=true"};
+static const char *fonts[]          = { "Terminess Nerd Font:size=18:antialias=true:autohint=true", "Font Awesome 6 Free:size=14:antialias=true:autohint=true"};
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray[]        = "#6b6b6b";
 static const char col_black[]       = "#000000";

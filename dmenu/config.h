@@ -9,7 +9,7 @@ static const float menu_height_ratio = 4.0f;  /* This is the ratio used in the o
 
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-    "Terminess Nerd Font:size=14:antialias:true:autohint=true",
+    "Terminess Nerd Font:size=18:antialias:true:autohint=true",
     "monospace:size=15:antialias=true:autohint=true"};
 
 static const char *prompt = NULL ; /* -p  option; prompt to the left of input field */
