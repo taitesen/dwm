@@ -59,20 +59,35 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "{tile}",      tile },    /* first entry is default */
-	{ "{monocle}",      monocle },
-	{ "{spiral}",      spiral },
-	{ "{dwindle}",     dwindle },
-	{ "{deck}",      deck },
-	{ "{bstack}",      bstack },
-	{ "{bstackhoriz}",      bstackhoriz },
-	{ "{grid}",      grid },
-	{ "{nrowgrid}",      nrowgrid },
-	{ "{horizgrid}",      horizgrid },
-	{ "{gaplessgrid}",      gaplessgrid },
-	{ "{centeredmaster}",      centeredmaster },
-	{ "{centeredmasterfloating}",      centeredfloatingmaster },
-	{ "{nolayout}",      NULL },    /* no layout function means floating behavior */
+	/*{ "[]=",      tile },    /* first entry is default */
+	/*{ "[M]",      monocle },*/
+	/*{ "[@]",      spiral },*/
+	/*{ "[\\]",     dwindle },*/
+	/*{ "H[]",      deck },*/
+	/*{ "TTT",      bstack },*/
+	/*{ "===",      bstackhoriz },*/
+	/*{ "HHH",      grid },*/
+	/*{ "###",      nrowgrid },*/
+	/*{ "---",      horizgrid },*/
+	/*{ ":::",      gaplessgrid },*/
+	/*{ "|M|",      centeredmaster },*/
+	/*{ ">M>",      centeredfloatingmaster },*/
+	/*{ "><>",      NULL },    /* no layout function means floating behavior */
+
+	{ "  ",  tile },    /* first entry is default */
+	{ "  ",  monocle },
+	{ "  ",  spiral },
+	{ "  ",  dwindle },
+	{ "  ",  deck },
+	{ "  ",  bstack },
+	{ "  ",  bstackhoriz },
+	{ " 󰕰 ",  grid },
+	{ " 󰾍 ",  nrowgrid },
+	{ " 󱗼 ",  horizgrid },
+	{ ":::",  gaplessgrid },
+	{ " 󰕭 ",  centeredmaster },
+	{ "  ",  centeredfloatingmaster },
+	{ "  ",  NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
 
