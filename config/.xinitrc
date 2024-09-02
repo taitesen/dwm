@@ -36,7 +36,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 setxkbmap us &
-feh --bg-max ~/Pictures/wallpapers/1.* &
+feh --bg-max ~/Pictures/wallpapers/7.* &
 picom -f &
 slstatus &
 xset r rate 300 60 &
