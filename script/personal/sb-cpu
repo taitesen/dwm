@@ -1,0 +1,7 @@
+#!/bin/sh
+
+black=#EBBCBA
+
+cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
+printf "^B2^^c$black^  "
+printf "^d^^C2^ $cpu_val"

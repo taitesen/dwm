@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+black=#EBBCBA
+printf "^B4^^c$black^  "
+printf "^d^^C4^ $(free -h | awk '/^Mem/ { print $3 }' | sed s/i//g)"

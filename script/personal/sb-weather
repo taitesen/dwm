@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+black=#EBBCBA
+LOCATION=Aizawl
+DATA=$(curl -s wttr.in/$LOCATION?format=1 | grep -o ".[0-9].*")
+printf "^c$black^^B3^  ^d^^C3^${DATA}"
+

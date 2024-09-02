@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+  printf "^C5^^c#EBBCBA^  "
+  printf "^C5^^c#6b6b6b^%.0f\n" $(cat /sys/class/backlight/*/brightness)
