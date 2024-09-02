@@ -1,7 +1,7 @@
 # Profile file. Runs on login. Environmenta variables are set here
 
 # Add `~/.local/bin` to $PATH
-export PATH="$PATH:$HOME/.local/bin/:$HOME/local/bin/personal/:$HOME/usr/share/"
+export PATH="$PATH:$HOME/.local/bin/:$HOME/.local/bin/personal/:$HOME/usr/share/"
 
 # Default programs
 export TERMINAL="st"

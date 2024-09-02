@@ -66,15 +66,13 @@ static const char unknown_str[] = "";
 static const struct arg args[] = {
 	/* function             format                          argument */
 
-	{ netspeed_rx,        "  %s",        "wlo1" },
-	{ netspeed_tx,        "  %s",       "wlo1" },
-	/*{ run_command,        "%s",          "sh nettraf" },*/
-	{ run_command,        "%s",          "sh battery" },
-	/*{ battery_state,      "^c#6b6b6b^%s",          "BAT0" },*/
-	/*{ battery_perc,       "%s ",         "BAT0" },*/
-	/*{ temp,               " %s ",       "cat /sys/class/thermal/thermal_zone0/subsystem/thermal_zone7/temp" },*/
-	{ ram_used,           " 󰍛 %s ",       NULL },
-	{ datetime,           "󰥔 %s ",       "%H:%M %a %d %b" },
-	{ run_command,        "%s",          "sh ~/.local/bin/net.sh" },
-	{ wifi_perc,          "%s      ",          "wlo1" },
+    { run_command,      "%s",              "sh sb-battery" },
+    { run_command,      "%s",              "sh sb-brightness" },
+    { run_command,      "%s",              "sh sb-clock" },
+    { run_command,      "%s",              "sh sb-cpu" },
+    { run_command,      "%s",              "sh sb-internet" },
+    { run_command,      "%s",              "sh sb-pacupdate" },
+    { run_command,      "%s",              "sh sb-ram" },
+    { run_command,      "%s",              "sh sb-volume" },
+    { run_command,      "%s       ",              "sh sb-weather" },
 };
