@@ -3,14 +3,14 @@
 # Update first
 sudo pacman -Syu --noconfirm --needed base-devel
 
+# Install fonts
+sudo pacman -S --noconfirm --needed $(< packages/fonts.txt)
+
 # Install the xorg
 sudo pacman -S --noconfirm --needed $(< packages/core.txt)
 
 # Install utility
 sudo pacman -S --noconfirm --needed $(< packages/utility.txt)
-
-# Install fonts
-sudo pacman -S --noconfirm --needed $(< packages/fonts.txt)
 
 # Create Directories
 cd "$HOME"

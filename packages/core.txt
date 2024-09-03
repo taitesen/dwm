@@ -2,7 +2,6 @@ xorg-server
 xorg-xinit
 xorg-xrandr
 xorg-xsetroot
-ttf-liberation
 libxft
 libxinerama
 qutebrowser
