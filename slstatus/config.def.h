@@ -65,14 +65,9 @@ static const char unknown_str[] = "";
  */
 static const struct arg args[] = {
 	/* function             format                          argument */
-
-    { run_command,      "%s",              "sh sb-battery" },
-    { run_command,      "%s",              "sh sb-brightness" },
-    { run_command,      "%s",              "sh sb-clock" },
-    { run_command,      "%s",              "sh sb-cpu" },
-    { run_command,      "%s",              "sh sb-internet" },
-    { run_command,      "%s",              "sh sb-pacupdate" },
-    { run_command,      "%s",              "sh sb-ram" },
     { run_command,      "%s",              "sh sb-volume" },
-    { run_command,      "%s",              "sh sb-weather" },
+    { run_command,      "%s",              "sh sb-ram" },
+    { run_command,      "%s",              "sh sb-internet" },
+    { run_command,      "%s",              "sh sb-battery" },
+    { run_command,      "%s",              "sh sb-clock" },
 };
