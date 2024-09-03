@@ -74,5 +74,5 @@ static const struct arg args[] = {
     { run_command,      "%s",              "sh sb-pacupdate" },
     { run_command,      "%s",              "sh sb-ram" },
     { run_command,      "%s",              "sh sb-volume" },
-    { run_command,      "%s       ",              "sh sb-weather" },
+    { run_command,      "%s        ",              "sh sb-weather" },
 };
