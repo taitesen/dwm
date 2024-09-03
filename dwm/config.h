@@ -19,7 +19,7 @@ static const int sidepad            = 30;       /* horizontal padding of bar */
 static const int horizpadbar        = 1;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 20;        /* vertical padding for statusbar */
 
-static const char *fonts[]          = { "Terminess Nerd Font:size=14:antialias=true:autohint=true", "Font Awesome 6 Free:size=14:antialias=true:autohint=true"};
+static const char *fonts[]          = { "Terminess Nerd Font:size=13:style=Bold:antialias=true:autohint=true", "Font Awesome 6 Free:size=14:antialias=true:autohint=true"};
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray[]        = "#6b6b6b";
 static const char col_black[]       = "#000000";
