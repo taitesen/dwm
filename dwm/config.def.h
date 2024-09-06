@@ -19,7 +19,7 @@ static const int sidepad            = 30;       /* horizontal padding of bar */
 static const int horizpadbar        = 1;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 20;        /* vertical padding for statusbar */
 
-static const char *fonts[]          = { "Terminess Nerd Font:size=18:style=Bold:antialias=true:autohint=true", "Font Awesome 6 Free:size=14:antialias=true:autohint=true"};
+static const char *fonts[]          = { "Terminess Nerd Font:size=16:style=Bold:antialias=true:autohint=true", "Font Awesome 6 Free:size=14:antialias=true:autohint=true"};
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray[]        = "#6b6b6b";
 static const char col_black[]       = "#000000";
@@ -41,10 +41,11 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",     NULL,       NULL,       0,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "mpv",      NULL,       NULL,       1 << 8,       0,           -1 },
+	/* class                 instance    title       tags mask     isfloating   monitor */
+	{ "Gimp",                NULL,       NULL,       0,            1,           -1 },
+	{ "Firefox",             NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "mpv",                 NULL,       NULL,       1 << 8,       0,           -1 },
+	{ "VirtualBox Manager",  NULL,       NULL,       1 << 3,       0,           -1 },
 };
 
 /* layout(s) */
