@@ -1,0 +1,80 @@
+set -g @plugin 'tmux-plugins/tpm'
+#set -g default-terminal "tmux-256color"
+
+# unbind-key C-b
+set-option -g prefix M-Space
+bind-key M-Space send-prefix
+
+set-option -g focus-events on
+set-option -sg escape-time 10
+set-option -sa terminal-features ',st:RGB'
+
+# passthrough color escape sequences
+set -g allow-passthrough 1
+
+unbind %
+bind | split-window -h -c "#{pane_current_path}" \; resize-pane -R 20
+unbind '"'
+bind - split-window -v -c "#{pane_current_path}" \; resize-pane -D 5
+bind -r m resize-pane -Z
+
+bind-key r source-file ~/.tmux.conf \; display-message "tmux configuration is reloaded!!"
+
+# vi mode in tmux
+set-window-option -g mode-keys vi
+bind-key -T copy-mode-vi v send -X begin-selection
+bind-key -T copy-mode-vi v send -X select-line
+bind-key -T copy-mode-vi y send -X copy-pipe-and-cancel 'xclip -in -selection clipboard'
+unbind -T copy-mode-vi mousedragend1pane
+
+
+bind-key -r -T prefix k resize-pane -U 1
+bind-key -r -T prefix j resize-pane -D 1
+bind-key -r -T prefix h resize-pane -L 1
+bind-key -r -T prefix l resize-pane -R 1
+
+# tpm plugin
+set -g @plugin 'tmux-plugins/tpm'
+
+# list of tmux plugins
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+
+set -g @resurrect-capture-pane-contents 'on'
+set -g @continuum-restore 'on'
+
+# ---- Theme ------ #
+
+#  modes
+setw -g clock-mode-colour colour1
+setw -g mode-style 'fg=#ebbcba bg=#000000 bold'
+
+# panes
+set -g pane-border-style 'fg=#6c7086'
+set -g pane-active-border-style 'fg=#6c7086'
+
+# statusbar
+set -g status-position bottom
+set -g status-justify left
+set -g status-style 'fg=#ebbcba'
+set -g status-left ''
+set -g status-right '%Y-%m-%d %H:%M '
+set -g status-right-length 50
+set -g status-left-length 10
+
+setw -g window-status-current-style 'fg=#000000 bg=#ebbcba bold'
+setw -g window-status-current-format ' #I #W #F '
+
+setw -g window-status-style 'fg=#000000'
+setw -g window-status-format ' #I #[fg=#ebbcba]#W #[bg=#000000]#F '
+
+setw -g window-status-bell-style 'fg=#ebbcba bg=#000000 bold'
+
+# messages
+set -g message-style 'fg=#ebbcba bg=#000000 bold'
+
+
+
+run '~/.tmux/plugins/tpm/tpm'
+
