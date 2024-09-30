@@ -29,17 +29,17 @@ fi
 mkdir -p $HOME/.config/nvim/
 git clone https://github.com/taitesen/nvim.git $HOME/.config/nvim/
 
-# Installing paru AUR helper
+# Installing yay AUR helper
 if ! command -v paru &> /dev/null
 then
-    cd /tmp/
-    git clone https://aur.archlinux.org/paru.git
-    cd paru
+    cd /tmp
+    git clone https://aur.archlinux.org/yay.git
+    cd yay
     makepkg -si
 fi
 
 # Installing additional softwares via paru
-paru -S ueberzugpp vesktop-bin picom-git
+yay -S --noconfirm ueberzugpp vesktop-bin picom-git
 
 # Cloning my dwm repo
 mkdir -p $HOME/.local/ && cd $HOME/.local/
