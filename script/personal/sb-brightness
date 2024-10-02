@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-  printf "^C5^^c#EBBCBA^  "
+  printf "^C5^^c#EBBCBA^ "
 
   current_brightness=$(cat /sys/class/backlight/*/brightness)
   max_brightness=120000
   brightness_percentage=$(( current_brightness * 100 / max_brightness ))
-  printf "^C5^^c#6b6b6b^%.d%%\n" $brightness_percentage
+  printf "^C5^^c#6b6b6b^%3d%%\n" $brightness_percentage

@@ -20,5 +20,5 @@ case "$clock" in
 esac
 
 
-printf "^c$black^ ^B4^ $icon"
+printf "^c$black^^B4^$icon"
 printf "^d^^C4^ $(date '+%H:%M')"

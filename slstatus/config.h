@@ -68,7 +68,7 @@ static const struct arg args[] = {
     { run_command,      "%s",              "sh sb-brightness" },
     { run_command,      "%s",              "sh sb-volume" },
     { run_command,      "%s",              "sh sb-ram" },
-    { run_command,      "%s",              "sh sb-internet" },
     { run_command,      "%s",              "sh sb-battery" },
     { run_command,      "%s",              "sh sb-clock" },
+    { run_command,      "%s",              "sh sb-internet" },
 };

@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 black=#EBBCBA
 case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c$black^^B2^ 󰤨 ^d^%s" " ^C2^Connected" ;;
-	down) printf "^c$black^^B2^ 󰤭 ^d^%s" " ^C2^Disconnected" ;;
+	# up) printf "^c$black^^B2^ 󰤨 ^d^%s" " ^C2^Connected" ;;
+	up) printf "^c$black^^B2^ 󰤨 ^d^%s      " ;;
+	# down) printf "^c$black^^B2^ 󰤭 ^d^%s" " ^C2^Disconnected" ;;
+	down) printf "^c$black^^B2^ 󰤭 ^d^%s      " ;;
 esac
