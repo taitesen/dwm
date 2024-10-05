@@ -30,7 +30,7 @@ mkdir -p $HOME/.config/nvim/
 git clone https://github.com/taitesen/nvim.git $HOME/.config/nvim/
 
 # Installing yay AUR helper
-if ! command -v paru &> /dev/null
+if ! command -v yay &> /dev/null
 then
     cd /tmp
     git clone https://aur.archlinux.org/yay.git
