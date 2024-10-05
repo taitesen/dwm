@@ -53,8 +53,6 @@ rm -rf src/ && mv dwm/ src/
 # Copying config files
 cd src/config/
 cp -r .tmux.conf .xinitrc .zprofile .Xresources $HOME/
-mkdir -p $HOME/.config/zsh/
-cp -r .zshrc $HOME/.config/zsh/
 
 config_items=(
     "fastfetch"
@@ -86,25 +84,6 @@ for item in "${dirs[@]}"; do
     else
         echo "$item does not exits"
     fi
-done
-
-
-# Copying scripts to local bin
-cd ../script/
-mkdir -p $HOME/.local/bin/
-scripts=(
-    "battery"
-    "clock"
-    "heiham"
-    "internet"
-    "nettraf"
-    "tmux-sessionizer"
-    "volume"
-    "personal/"
-)
-dests="$HOME/.local/bin/"
-for item in "${scripts[@]}"; do
-    cp -r "$item" "$dests"
 done
 
 # Moving wallpapers folders
