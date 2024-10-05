@@ -13,8 +13,15 @@ alias ls='eza -x --color=always --icons=always --no-quotes'
 alias la='ls -ad .?* --no-quotes --group-directories-first'
 alias tree='lt --no-quotes'
 alias refresh='xset r rate 300 60'
+alias suppp='bin Duata'
 
 clear
+suppp
+
+function nmain() {
+    nvim "$@"
+    ./main
+}
 
 bup(){
     brightnessctl set "$1%+"
