@@ -24,12 +24,20 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/taitesen/dwm/master/instal
 ```
 
 ---
+### Old Screenshot
 ![Screen shot](screenshot/FullScreenshot.png)
 
 ![qutebroser](screenshot/qb.png)
 
 ![random screnshot](screenshot/yaaa.png)
 
+### Updated Screenshot
+- Workspaces
+![Screen](screenshot/desktop.png)
+- Yazi
+![yazi1](screenshot/yazi.png)
+- Another yazi
+![yaziii](screenshot/yazi2.png)
 ---
 ## Important Keybinds
 - Default <kbd>Mod Key</kbd> is <kbd>Win</kbd>
