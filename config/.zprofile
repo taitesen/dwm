@@ -26,6 +26,9 @@ export socket=/home/taitesen/Vaults/project/socket/
 # MPD daemon start (if no other user instance exists)
 # [ ! -s ~/.config/mpd/pid ] && mpd
 
+// This needs to lived here
+alias refresh='xset r rate 300 60; source $dot/config/.zshrc ~/.zprofile; xrdb ~/.Xresources'
+
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   exec startx &>/dev/null
 fi
