@@ -3,17 +3,14 @@ st.alpha: 0.9
 st.alphaOffset: +0.05
 
 !! Set a default font and font size as below:
-/*st.font: JetBrainsMono Nerd Font Propo:style=ExtraLight:size=16*/
-/*st.font: ComicShannsMono Nerd Font Propo:style=Light:size=18*/
-/*st.font: ComicShanns Nerd Font:style=Light:size=18*/
+/*st.font: JetBrainsMono Nerd Font Propo:style=ExtraLight:size=19*/
+st.font: ComicShannsMono Nerd Font:style=Light:size=19
 /*st.font: Terminess Nerd Font Propo:style=Bold:size=18*/
-/*st.font: Iosevka Nerd Font Propo:style=Regular:size=20*/
-st.font: Iosevka NFP Light:style=Regular:size=19
-/*st.font: SFMono Nerd Font Mono-15*/
+/*st.font: Iosevka NF Light:style=Regular:size=19*/
 
 
 st.termname: st-256color
-st.borderpx: 30
+st.borderpx: 10
 
 !! Set the background, foreground and cursor colors as below:
 
