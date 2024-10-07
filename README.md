@@ -4,7 +4,7 @@
 > [!TIP]
 > Cloning the repo and running the `install.sh` is not recommended. Run the command below instead.
 
-- Pre-requisite curl
+- Pre-requisite: `curl`
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/taitesen/dwm/master/install.sh)"
 ```
