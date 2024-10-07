@@ -1,6 +1,4 @@
 # NOTE
----
-
 > [!TIP]
 > Cloning the repo and running the `install.sh` is not recommended. Run the command below instead.
 
