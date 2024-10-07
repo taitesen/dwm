@@ -1,28 +1,13 @@
 # NOTE
 ---
-> [!WARNING]
->This install script is composed of moving files around only. It was design for personal use in arch linux, and might not be suited for everyone. It is highly suggested to tweak as per your GNU/Linux distributions.
 
-Tih ve leh lawk loh chuan!!
+> [!TIP]
+> Cloning the repo and running the `install.sh` is not recommended. Run the command below instead.
 
-- With wget
-```sh
-wget -c https://raw.githubusercontent.com/taitesen/dwm/master/install.sh
-chmod +x install.sh
-./install.sh
-```
-- With curl
-```sh
-curl -C - -O https://raw.githubusercontent.com/taitesen/dwm/master/install.sh
-chmod +x install.sh
-./install.sh
-```
-
-- Dont try this
+- Pre-requisite curl
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/taitesen/dwm/master/install.sh)"
 ```
-
 ---
 ### Old Screenshot
 ![Screen shot](screenshot/FullScreenshot.png)
@@ -44,10 +29,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/taitesen/dwm/master/instal
 - <kbd>Mod Key + Enter </kbd> spawn Terminal
 - <kbd>Mod Key + space </kbd> spawn dmenu
 - <kbd>Mod Key + c </kbd> kill client
-- <kbd>Mod Key + . </kbd> next window tag
+- <kbd>Mod Key + , </kbd> prev window
+- <kbd>Mod Key + . </kbd> next window
 - <kbd>Mod Key + Ctrl + , </kbd> Cycle next window layout
-- <kbd>Mod Key + Ctrl + . </kbd> Cycle previous window layout
-- <kbd>Mod Key + , </kbd> previous window tag
+- <kbd>Mod Key + Ctrl + . </kbd> Cycle prev window layout
 - <kbd>Mod Key + u </kbd> Jumps to 1st window tag
 - <kbd>Mod Key + i </kbd> Jumps to 2st window tag
 - <kbd>Mod Key + o </kbd> Jumps to 3st window tag
@@ -59,4 +44,3 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/taitesen/dwm/master/instal
 - <kbd>Mod Key + n </kbd> Jumps to 9st window tag
 - <kbd>Mod Key + shift + b </kbd> Toggle blur
 - <kbd>Mod Key + b </kbd> Toggle bar
-
