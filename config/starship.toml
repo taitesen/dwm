@@ -19,7 +19,8 @@ symbol = " "
 
 [directory]
 read_only = " 󰌾"
-truncation_length = 7
+truncation_length = 0
+truncate_to_repo = false
 style = "#6b6b6b"
 
 [docker_context]
@@ -38,7 +39,7 @@ symbol = " "
 symbol = " "
 
 [git_branch]
-symbol = " "
+symbol = " "
 
 [golang]
 symbol = " "
