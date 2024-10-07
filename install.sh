@@ -14,7 +14,9 @@ sudo pacman -S --noconfirm --needed $(< packages/utility.txt)
 
 # Create Directories
 cd "$HOME"
-mkdir -p Documents Downloads Pictures Videos Music Workspaces Vaults
+mkdir -p Documents Downloads Pictures Videos Music Workspaces Vaults/git
+
+OG_PATH="$HOME/Vaults/git"
 
 # Changing default shell to zsh
 ZSH_PATH=$(which zsh)
@@ -26,8 +28,7 @@ else
 fi
 
 # Installing my neovim config
-mkdir -p $HOME/.config/nvim/
-git clone https://github.com/taitesen/nvim.git $HOME/.config/nvim/
+git clone https://github.com/taitesen/nvim.git $OG_PATH
 
 # Installing yay AUR helper
 if ! command -v yay &> /dev/null
@@ -42,17 +43,17 @@ fi
 yay -S --noconfirm ueberzugpp vesktop-bin picom-git
 
 # Cloning my dwm repo
-mkdir -p $HOME/.local/ && cd $HOME/.local/
+cd $OG_PATH
 if ! git clone https://github.com/taitesen/dwm.git; then
     echo "Failed to clone dwm repository"
     exit 1
 fi
 
-rm -rf src/ && mv dwm/ src/
+mv dwm dotfiles
 
 # Copying config files
-cd src/config/
-cp -r .tmux.conf .xinitrc .zprofile .Xresources $HOME/
+cd dotfiles/config/
+cp -r .xinitrc .zprofile .Xresources $HOME
 
 config_items=(
     "fastfetch"
@@ -85,11 +86,6 @@ for item in "${dirs[@]}"; do
         echo "$item does not exits"
     fi
 done
-
-# Moving wallpapers folders
-cd ../
-mv wallpapers/ $HOME/Pictures/
-cd "$HOME"
 
 # Post-Installation
 echo -e "Reboot now? [y/n]: \c"

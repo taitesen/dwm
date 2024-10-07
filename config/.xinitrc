@@ -36,7 +36,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 setxkbmap us &
-feh --bg-max ~/Pictures/wallpapers/7.* &
+feh --bg-max ~/Vaults/git/dotfiles/wallpapers/2.* &
 picom -f &
 slstatus &
 xset r rate 300 60 &
@@ -48,6 +48,3 @@ done
 
 # Execute DWM
 exec dwm
-
-
-
