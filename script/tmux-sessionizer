@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Workspaces ~/Vaults ~/.local/src -mindepth 1 -maxdepth 1 -type d | fzf)
+    selected=$(find ~/Vaults/git -mindepth 1 -maxdepth 1 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then

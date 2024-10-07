@@ -13,7 +13,7 @@ alias ls='eza -x --color=always --icons=always --no-quotes'
 alias la='ls -ad .?* --no-quotes --group-directories-first'
 alias tree='lt --no-quotes'
 alias suppp='bin Duata'
-alias refresh='xset r rate 300 60; source $dot/config/.zshrc ~/.zprofile; xrdb ~/.Xresources'
+alias refresh='xset r rate 300 60; source $dot/config/zsh/.zshrc ~/.zprofile; xrdb ~/.Xresources'
 
 clear
 suppp
