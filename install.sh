@@ -53,7 +53,7 @@ mv dwm dotfiles
 
 # Copying config files
 cd dotfiles/config/
-cp -r .xinitrc .zprofile .Xresources $HOME
+cp -r .xinitrc .zprofile .Xresources .tmux.conf $HOME
 
 config_items=(
     "fastfetch"
