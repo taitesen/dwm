@@ -2,7 +2,7 @@
 static char *font =
     "JetBrainsMono Nerd Font:pixelsize=20:antialias=true:autohint=true";
 static char *font2[] = {
-    "Iosevka NFP Light:pixelsize=10:antialias=true:autohint=true"};
+    "IosevkaTerm NFP Light:pixelsize=19:antialias=true:autohint=true"};
 
 static int borderpx = 16;
 

@@ -4,9 +4,10 @@ st.alphaOffset: +0.05
 
 !! Set a default font and font size as below:
 /*st.font: JetBrainsMono Nerd Font Propo:style=ExtraLight:size=19*/
-st.font: ComicShannsMono Nerd Font:style=Light:size=19
+/*st.font: ComicShannsMono Nerd Font:style=Light:size=19*/
 /*st.font: Terminess Nerd Font Propo:style=Bold:size=18*/
-/*st.font: Iosevka NF Light:style=Regular:size=19*/
+st.font: IosevkaTerm NFP Light:style=Regular:size=19
+/*st.font: VictorMono NFP Medium:style=Medium:size=18*/
 
 
 st.termname: st-256color
@@ -33,5 +34,5 @@ st.borderpx: 10
 *.color15: #e0def4
 *.background: #000000
 *.foreground: #999999
-*.cursorColor: #eabcba
+*.cursorColor: #ebbcba
 
