@@ -34,7 +34,6 @@ openssl
 openssh
 bat
 brightnessctl
-qutebrowser
 xclip
 xsel
 obs-studio
