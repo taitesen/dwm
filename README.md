@@ -14,6 +14,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/taitesen/dwm/master/instal
 
 ![random screnshot](screenshot/yaaa.png)
 
+---
 ### Updated Screenshot
 - Workspaces
 ![Screen](screenshot/desktop.png)

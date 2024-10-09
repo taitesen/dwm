@@ -39,7 +39,7 @@ then
     makepkg -si
 fi
 
-# Installing additional softwares via paru
+# Installing additional softwares via yay
 yay -S --noconfirm ueberzugpp vesktop-bin picom-git
 
 # Cloning my dwm repo
