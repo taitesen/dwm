@@ -252,7 +252,7 @@ c.colors.tabs.indicator.system = "none"
 
 # Foreground color of unselected odd tabs.
 # Type: QtColor
-c.colors.tabs.odd.fg = "#ebbcba"
+c.colors.tabs.odd.fg = "#6b6b6b"
 
 # Background color of unselected odd tabs.
 # Type: QtColor
@@ -260,7 +260,7 @@ c.colors.tabs.odd.bg = "#3b3b3b"
 
 # Foreground color of unselected even tabs.
 # Type: QtColor
-c.colors.tabs.even.fg = "#ebbcba"
+c.colors.tabs.even.fg = "#6b6b6b"
 
 # Background color of unselected even tabs.
 # Type: QtColor
@@ -282,6 +282,8 @@ c.colors.tabs.selected.even.fg = "#ebbcba"
 # Type: QtColor
 c.colors.tabs.selected.even.bg = "#000000"
 
+c.zoom.default = "150%"
+
 # Background color for webpages if unset (or empty to use the theme's
 # color).
 # Type: QtColor
@@ -295,7 +297,7 @@ c.fonts.web.size.default = 20
 c.completion.height = "20%"
 c.tabs.favicons.scale = 1.1
 c.tabs.padding = {"bottom": 4, "left": 7, "right": 7, "top": 4}
-c.fonts.default_family = "JetBrainsMono Nerd Font"
+c.fonts.default_family = "FreeSans"
 
 # Bindings for normal mode
 config.bind("e", "hint links spawn mpv {hint-url}")
