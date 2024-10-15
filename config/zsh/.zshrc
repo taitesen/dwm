@@ -15,6 +15,7 @@ alias tree='lt --no-quotes'
 alias suppp='bin Duata'
 alias refresh='xset r rate 300 60; source $dot/config/zsh/.zshrc ~/.zprofile; xrdb ~/.Xresources'
 alias nvim='XDG_CONFIG_HOME=/home/taitesen/Vaults/git nvim'
+alias list='fc-list | sed -e "s/^[^:]*://g"'
 
 clear
 suppp

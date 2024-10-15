@@ -81,7 +81,7 @@ static const char *colors[][3]      = {
   #+end_src
 
 * TAGGING
-+ tags: Defines the names of the tags (or workspaces) in the window manager. Each alphaber represents a workspace tag.
++ tags: Defines the names of the tags (or workspaces) in the window manager. Each alphabet represents a workspace tag.
  #+begin_src c
 static const char *tags[] = { "U", "I", "O", "P", "H", "J", "K", "L", "N" };
  #+end_src
