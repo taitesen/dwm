@@ -5,3 +5,11 @@ ttf-firacode-nerd
 ttf-iosevkaterm-nerd
 ttf-victor-mono-nerd
 otf-comicshanns-nerd
+ttf-noto-nerd
+ttf-opensans
+ttf-montserrat
+ttf-lato
+ttf-roboto-mono-nerd
+ttf-inconsolata-nerd
+ttf-roboto-mono-nerd
+ttf-ibmplex-mono-nerd
