@@ -24,6 +24,8 @@ function nmain() {
     ./main
 }
 
+bindkey -e
+
 bup(){
     brightnessctl set "$1%+"
 }
