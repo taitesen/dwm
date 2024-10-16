@@ -3,8 +3,6 @@ eval "$(fzf --zsh)"
 # eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/zen.toml)"
 eval "$(starship init zsh)"
 
-alias clear='clear && fastfetch --config /home/taitesen/.config/fastfetch/config.duata.jsonc'
-alias almighty='git'
 alias l='eza -lh --git --no-time --no-filesize --group-directories-first --color=always --icons=always  --no-quotes'
 alias ld='eza -D --color=always --icons=always --no-quotes'
 alias ll='eza -Shl --git --total-size --no-time --group-directories-first --color=always --icons=always  --no-quotes'
@@ -12,13 +10,9 @@ alias lt='eza -xT -L2 --group-directories-first --color=always --icons=always  -
 alias ls='eza -x --color=always --icons=always --no-quotes'
 alias la='ls -ad .?* --no-quotes --group-directories-first'
 alias tree='lt --no-quotes'
-alias suppp='bin Duata'
 alias refresh='xset r rate 300 60; source $dot/config/zsh/.zshrc ~/.zprofile; xrdb ~/.Xresources'
 alias nvim='XDG_CONFIG_HOME=/home/taitesen/Vaults/git nvim'
 alias list='fc-list | sed -e "s/^[^:]*://g"'
-
-clear
-suppp
 
 function nmain() {
     nvim "$@"

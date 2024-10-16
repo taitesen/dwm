@@ -38,7 +38,7 @@ fi
 setxkbmap us &
 feh --bg-max ~/Vaults/git/dotfiles/wallpapers/2.* &
 picom -f &
-slstatus &
+dwmblocks &
 xset r rate 300 60 &
 
 # Loop
