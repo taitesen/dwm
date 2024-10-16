@@ -9,7 +9,7 @@ static const unsigned int gappov    = 20;
 static       int smartgaps          = 0;
 
 static const int showbar            = 1;
-static const int topbar             = 1;
+static const int topbar             = 0;
 
 static const int vertpad            = 10;
 static const int sidepad            = 20;

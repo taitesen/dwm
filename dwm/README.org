@@ -43,7 +43,7 @@ static       int smartgaps          = 0;
 + topbar: If set to 1, the bar will be at the top; if 0, at the bottom.
   #+begin_src c
 static const int showbar            = 1;
-static const int topbar             = 1;
+static const int topbar             = 0;
   #+end_src
 
 + vertpad/sidepad: Padding around the status bar
