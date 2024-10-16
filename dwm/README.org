@@ -1,6 +1,12 @@
-#+title: DWM CONFIG
+#+title: Main configuraration file: config.def.h
 #+PROPERTY: header-args :tangle config.def.h
+If you're using Org mode, you can directly edit this README.org file. After making your changes, save the file and run the command `org-babel-tangle` to apply your modifications.
 
+Alternatively, you can manually edit the config.def.h file. After saving your changes, run the following command to apply them.
+#+begin_src bash
+sudo cp config.def.h
+sudo make clean install
+#+end_src
 * TABLE OF CONTENTS :toc:
 - [[#appearance][APPEARANCE]]
 - [[#tagging][TAGGING]]

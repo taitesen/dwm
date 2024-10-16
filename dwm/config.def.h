@@ -1,3 +1,6 @@
+sudo cp config.def.h
+sudo make clean install
+
 static const unsigned int borderpx  = 0;
 static const unsigned int snap      = 0;
 
@@ -46,6 +49,7 @@ static const Rule rules[] = {
 	{ "VirtualBox Manager",  NULL,       NULL,       1 << 3,       0,           -1 },
 };
 
+static const float mfact     = 0.55;
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
@@ -101,8 +105,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_e,      spawn,          {.v = emacs } },
 	{ MODKEY,                       XK_space,  spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-  { MODKEY|ShiftMask,             XK_s,      spawn,          {.v   =   screenshot    }     },
-  { MODKEY|ShiftMask,             XK_b,      spawn,          {.v   =   toggleblur    }     },
+        { MODKEY|ShiftMask,             XK_s,      spawn,          {.v   =   screenshot    }     },
+        { MODKEY|ShiftMask,             XK_b,      spawn,          {.v   =   toggleblur    }     },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_period, focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_comma,  focusstack,     {.i = -1 } },
