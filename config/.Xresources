@@ -6,8 +6,8 @@ st.alphaOffset: +0.05
 /*st.font: ComicShannsMono Nerd Font:style=Light:size=19*/
 /*st.font: Terminess Nerd Font Propo:style=Bold:size=18*/
 /*st.font: IosevkaTerm NFP Medium:style=Bold:size=20*/
-/*st.font: IosevkaTerm NFP Light:style=Regular:size=20*/
-st.font: RobotoMono Nerd Font Propo Lt:style=Light:size=19
+st.font: IosevkaTerm NFP Light:style=Light:size=20
+/*st.font: RobotoMono Nerd Font Propo Lt:style=Light:size=19*/
 
 
 
@@ -16,24 +16,63 @@ st.borderpx: 10
 
 !! Set the background, foreground and cursor colors as below:
 
-!! rosepine
-*.color0: #26233a
-*.color1: #eb6f92
-*.color2: #9ccf92
-*.color3: #f6c177
-*.color4: #31748f
-*.color5: #c4a7e7
-*.color6: #ebbcba
-*.color7: #e0def4
-*.color8: #6e6a86
-*.color9: #eb6f92
-*.color10: #9ccfd8
-*.color11: #f6c177
-*.color12: #31748f
-*.color13: #c4a7ef
-*.color14: #ebbcba
-*.color15: #e0def4
-*.background: #000000
-*.foreground: #999999
-*.cursorColor: #ebbcba
+!! rosepine-custom -----------------------------------------
+/**.color0: #26233a*/
+/**.color1: #eb6f92*/
+/**.color2: #9ccf92*/
+/**.color3: #f6c177*/
+/**.color4: #31748f*/
+/**.color5: #c4a7e7*/
+/**.color6: #ebbcba*/
+/**.color7: #e0def4*/
+/**.color8: #6e6a86*/
+/**.color9: #eb6f92*/
+/**.color10: #9ccfd8*/
+/**.color11: #f6c177*/
+/**.color12: #31748f*/
+/**.color13: #c4a7ef*/
+/**.color14: #ebbcba*/
+/**.color15: #e0def4*/
+/**.background: #000000*/
+/**.foreground: #999999*/
+/**.cursorColor: #ebbcba*/
+!! rosepine-custom -----------------------------------------
 
+
+! special --------------------------------------------------
+*.foreground:   #999999
+*.background:   #000000
+*.cursorColor:  #ebbcba
+
+! black
+*.color0:       #1f1d2e
+*.color8:       #26233a
+
+! red
+*.color1:       #eb6f92
+*.color9:       #eb6f92
+
+! green
+*.color2:       #f6c177
+*.color10:      #f6c177
+
+! yellow
+*.color3:       #ebbcba
+*.color11:      #ebbcba
+
+! blue
+*.color4:       #31748f
+*.color12:      #31748f
+
+! magenta
+*.color5:       #c4a7e7
+*.color13:      #c4a7e7
+
+! cyan
+*.color6:       #9ccfd8
+*.color14:      #9ccfd8
+
+! white
+*.color7:       #6e6a86
+*.color15:      #908caa
+! special --------------------------------------------------
