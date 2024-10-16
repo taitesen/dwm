@@ -38,9 +38,8 @@ symbol = " "
 symbol = " "
 
 [git_branch]
-format = "[:git]($git_style)[\\($branch\\)]($style)"
+format = "[:git](#bad1c3)[\\($branch\\)]($style)"
 style= "#ebbcba"
-git_style= "#bad1c3"
 
 [git_status]
 format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style)"
