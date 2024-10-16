@@ -3,7 +3,7 @@
 
 static int topbar = 1; /* -b  option; if 0, dmenu appears at bottom     */
 static const unsigned int alpha = 0xff;     /* Amount of opacity. 0xff is opaque             */
-static int centered = 1;                    /* -c option; centers dmenu on screen */
+static int centered = 0;                    /* -c option; centers dmenu on screen */
 static int min_width = 500;                    /* minimum width when centered */
 static const float menu_height_ratio = 4.0f;  /* This is the ratio used in the original calculation */
 
@@ -26,7 +26,7 @@ static const unsigned int alphas[SchemeLast][2] = {
 	[SchemeOut] = { OPAQUE, alpha },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
-static unsigned int lines = 3;
+static unsigned int lines = 0;
 
 /* -h option; minimum height of a menu line */
 static unsigned int lineheight = 30;
