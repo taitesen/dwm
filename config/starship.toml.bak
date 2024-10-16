@@ -20,7 +20,8 @@ symbol = " "
 [directory]
 read_only = " 󰌾"
 truncation_length = 0
-style = "#7894ab"
+truncate_to_repo = false
+style = "#6b6b6b"
 
 [docker_context]
 symbol = " "
@@ -38,20 +39,7 @@ symbol = " "
 symbol = " "
 
 [git_branch]
-format = "[:git]($git_style)[\\($branch\\)]($style)"
-style= "#ebbcba"
-git_style= "#bad1c3"
-
-[git_status]
-format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)]($style) ($ahead_behind$stashed)]($style)"
-style = "#b9a3ba"
-conflicted = "conflicted"
-untracked = "untracked"
-modified = "modified"
-staged = "staged"
-renamed = "renamed"
-deleted = "deleted"
-stashed = "stashed"
+symbol = " "
 
 [golang]
 symbol = " "
