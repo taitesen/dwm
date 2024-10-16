@@ -1,6 +1,3 @@
-sudo cp config.def.h
-sudo make clean install
-
 static const unsigned int borderpx  = 0;
 static const unsigned int snap      = 0;
 
