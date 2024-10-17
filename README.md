@@ -23,6 +23,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/taitesen/dwm/master/instal
 - Another yazi
 ![yaziii](screenshot/yazi2.png)
 ---
+### Latest Screenshot
+- Random
+![cars](screenshot/cars.png)
+- Random
+![desert](screenshot/desars.png)
+- Random
+![sunflower](screenshot/sunflars.png)
+- Random
+![waterall](screenshot/watafallss.png)
+---
 ## Important Keybinds
 - Default <kbd>Mod Key</kbd> is <kbd>Win</kbd>
 - <kbd>Mod Key + Enter </kbd> spawn Terminal
