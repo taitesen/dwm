@@ -9,7 +9,6 @@ export BROWSER="firefox-developer-edition"
 export READER="zathura"
 
 export ZDOTDIR="$HOME/Vaults/git/dotfiles/config/zsh"
-export DOOMDIR="$HOME/Vaults/git/doom"
 export ds=$HOME/Vaults/git/dataStructure
 export dot=$HOME/Vaults/git/dotfiles
 export socket=$HOME/Vaults/git/socket
