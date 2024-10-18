@@ -61,7 +61,7 @@ static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *screenshot[]  = { "flameshot", "gui", NULL };
 static const char *toggleblur[]  = { "toggleblur", NULL };
-static const char *emacs[]  = { "emacs", "-c", "-a \"emacs\"", NULL };
+static const char *emacs[]  = { "emacs", NULL };
 
 static const Key keys[] = {
 	/* modifier               key                 function                argument */
