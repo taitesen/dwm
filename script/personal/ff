@@ -11,5 +11,5 @@ url=$(echo "$selected" | cut -d' ' -f2)
 
 # Open the selected URL in Firefox
 if [ -n "$url" ]; then
-    firefox-developer-edition "$url"
+    firefox-developer-edition "$url" &
 fi
