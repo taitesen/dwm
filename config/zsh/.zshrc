@@ -13,7 +13,6 @@ alias tree='lt --no-quotes'
 alias refresh='xset r rate 300 60; source $dot/config/zsh/.zshrc ~/.zprofile; xrdb ~/.Xresources'
 alias nvim='XDG_CONFIG_HOME=/home/taitesen/Vaults/git nvim'
 alias list='fc-list | sed -e "s/^[^:]*://g"'
-alias ts="tmux ls | fzf --preview='echo {}' --bind 'enter:execute-silent(tmux switch-client -t {1})+abort'"
 
 function nmain() {
     nvim "$@"
