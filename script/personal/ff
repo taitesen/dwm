@@ -4,7 +4,7 @@
 bookmark_file="$HOME/.config/qutebrowser/quickmarks"
 
 # Use fzf to select a bookmark
-selected=$(bat "$bookmark_file" | fzf --preview="echo {} | cut -d' ' -f2")
+selected=$(bat "$bookmark_file" | fzf)
 
 # Extract the URL from the selected line
 url=$(echo "$selected" | cut -d' ' -f2)
