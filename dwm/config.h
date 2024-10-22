@@ -31,6 +31,7 @@ static const Rule rules[] = {
 	{ "qutebrowser",                 NULL,       NULL,       1 << 2,       1,           -1 },
 	{ "mpv",                         NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "Emacs",                       NULL,       NULL,       1 << 5,       1,           -1 },
+	{ "floatingst",                  NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
@@ -64,9 +65,11 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *screenshot[]  = { "flameshot", "gui", NULL };
 static const char *toggleblur[]  = { "toggleblur", NULL };
 static const char *emacs[]  = { "emacs", NULL };
+static const char *st2[] = { "st", "-c", "floatingst", NULL };
 
 static const Key keys[] = {
 	/* modifier               key                 function                argument */
+	{ MODKEY,                 XK_m,               spawn,                  {.v = st2 } },
 	{ MODKEY,                 XK_e,               spawn,                  {.v = emacs } },
 	{ MODKEY,                 XK_space,           spawn,                  {.v = dmenucmd } },
 	{ MODKEY,                 XK_Return,          spawn,                  {.v = termcmd } },

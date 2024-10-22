@@ -1,15 +1,9 @@
 #!/usr/bin/env bash
 
-# Path to your bookmark file
 bookmark_file="$HOME/.config/qutebrowser/quickmarks"
-
-# Use fzf to select a bookmark
 selected=$(bat "$bookmark_file" | fzf)
-
-# Extract the URL from the selected line
 url=$(echo "$selected" | cut -d' ' -f2)
 
-# Open the selected URL in Firefox
 if [ -n "$url" ]; then
     firefox-developer-edition "$url" &
 fi
