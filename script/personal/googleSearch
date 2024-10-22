@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+read -p "Eng nge i search duh: " searchString
+setsid firefox-developer-edition "https://google.com/search?q=${searchString// /+}"
+sleep 0.5

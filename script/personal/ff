@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
-
 bookmark_file="$HOME/.config/qutebrowser/quickmarks"
-selected=$(bat "$bookmark_file" | fzf)
-url=$(echo "$selected" | cut -d' ' -f2)
+selected=$(fzf < <(bat "$bookmark_file"))
 
+if [ -z "$selected" ]; then
+    exit 1
+fi
+
+# Extract URL and ensure it's not empty
+url=$(echo "$selected" | cut -d' ' -f2)
 if [ -n "$url" ]; then
-    firefox-developer-edition "$url" &
+    setsid firefox-developer-edition "$url" >/dev/null 2>&1 &
+    sleep 0.5
 fi

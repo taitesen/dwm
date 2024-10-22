@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+read -p "Eng nge i search duh: " searchString
+setsid firefox-developer-edition "https://perplexity.ai/search?q=${searchString// /+}"
+sleep 0.5
+

@@ -65,11 +65,15 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *screenshot[]  = { "flameshot", "gui", NULL };
 static const char *toggleblur[]  = { "toggleblur", NULL };
 static const char *emacs[]  = { "emacs", NULL };
-static const char *st2[] = { "st", "-c", "floatingst", NULL };
+static const char *quickmark[] = { "st", "-c", "floatingst", "-e", "ff", NULL };
+static const char *goggleit[] = { "st", "-c", "floatingst", "-e", "googleSearch", NULL };
+static const char *perpit[] = { "st", "-c", "floatingst", "-e", "perpSearch", NULL };
 
 static const Key keys[] = {
 	/* modifier               key                 function                argument */
-	{ MODKEY,                 XK_m,               spawn,                  {.v = st2 } },
+	{ MODKEY,                 XK_m,               spawn,                  {.v = goggleit } },
+	{ MODKEY|ShiftMask,       XK_m,               spawn,                  {.v = perpit } },
+	{ MODKEY,                 XK_q,               spawn,                  {.v = quickmark } },
 	{ MODKEY,                 XK_e,               spawn,                  {.v = emacs } },
 	{ MODKEY,                 XK_space,           spawn,                  {.v = dmenucmd } },
 	{ MODKEY,                 XK_Return,          spawn,                  {.v = termcmd } },
