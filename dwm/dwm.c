@@ -311,7 +311,9 @@ applyrules(Client *c)
 			}
 			if (r->isfloating) {
 				if (r->floatx >= 0) c->x = c->mon->mx + r->floatx;
-				if (r->floaty >= 0) c->y = c->mon->my + r->floaty;
+				/*if (r->floaty >= 0) c->y = c->mon->my + r->floaty;*/
+				/*if (r->floatx >= 0) c->x = r->floatx;*/
+				if (r->floaty >= 0) c->y = r->floaty;
 				if (r->floatw >= 0) c->w = r->floatw;
 				if (r->floath >= 0) c->h = r->floath;
 			}
@@ -1194,8 +1196,6 @@ manage(Window w, XWindowAttributes *wa)
 	updatewindowtype(c);
 	updatesizehints(c);
 	updatewmhints(c);
-	c->x = c->mon->mx + (c->mon->mw - WIDTH(c)) / 2;
-	c->y = c->mon->my + (c->mon->mh - HEIGHT(c)) / 2;
 	XSelectInput(dpy, w, EnterWindowMask|FocusChangeMask|PropertyChangeMask|StructureNotifyMask);
 	grabbuttons(c, 0);
 	if (!c->isfloating)

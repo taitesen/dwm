@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+cols=$(tput cols)
+message="(YOUTUBE): Eng nge i search duh?"
+col=$(( (cols - ${#message}) / 2))
+clear
+tput cup 0 $col
+echo "$message"
+tput sgr0
+read searchString
+setsid firefox-developer-edition "https://youtube.com/results?search_query=${searchString// /+}"
+sleep 0.5

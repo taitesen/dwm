@@ -14,7 +14,7 @@ static const char col_rose[]        = "#ebbcba";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray, col_black, col_black },
-	[SchemeSel]  = { col_rose, col_black,  col_black },
+	[SchemeSel]  = { col_rose, col_black,  col_rose },
 };
 
 /* tagging */
@@ -30,8 +30,8 @@ static const Rule rules[] = {
 	{ "firefox-developer-edition",   NULL,       NULL,       1 << 1,       0,           -1,        50,50,500,500,        -1 },
 	{ "qutebrowser",                 NULL,       NULL,       1 << 2,       0,           -1,        50,50,500,500,        -1 },
 	{ "mpv",                         NULL,       NULL,       1 << 8,       0,           -1,        50,50,500,500,        -1 },
-	{ "Emacs",                       NULL,       NULL,       1 << 5,       1,           -1,        50,50,500,500,        -1 },
-	{ "floatingst",                  NULL,       NULL,       0,            1,           -1,        2,2,800,300,           1 },
+	{ "Emacs",                       NULL,       NULL,       1 << 5,       1,           -1,        310,10,1300,1020,      -1 },
+	{ "floatingst",                  NULL,       NULL,       0,            1,           -1,        510,10,900,200,      10 },
 };
 
 /* layout(s) */
@@ -65,15 +65,17 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *screenshot[]  = { "flameshot", "gui", NULL };
 static const char *toggleblur[]  = { "toggleblur", NULL };
 static const char *emacs[]  = { "emacs", NULL };
-static const char *quickmark[] = { "st", "-c", "floatingst", "-e", "ff", NULL };
-static const char *goggleit[] = { "st", "-c", "floatingst", "-e", "googleSearch", NULL };
-static const char *perpit[] = { "st", "-c", "floatingst", "-e", "perpSearch", NULL };
+static const char *quickmarkcmd[] = { "st", "-c", "floatingst", "-e", "ff", NULL };
+static const char *gogglecmd[] = { "st", "-c", "floatingst", "-e", "googleSearch", NULL };
+static const char *perpcmd[] = { "st", "-c", "floatingst", "-e", "perpSearch", NULL };
+static const char *ytcmd[] = { "st", "-c", "floatingst", "-e", "yt", NULL };
 
 static const Key keys[] = {
 	/* modifier               key                 function                argument */
-	{ MODKEY,                 XK_m,               spawn,                  {.v = goggleit } },
-	{ MODKEY|ShiftMask,       XK_m,               spawn,                  {.v = perpit } },
-	{ MODKEY,                 XK_q,               spawn,                  {.v = quickmark } },
+	{ MODKEY,                 XK_y,               spawn,                  {.v = ytcmd } },
+	{ MODKEY,                 XK_m,               spawn,                  {.v = gogglecmd } },
+	{ MODKEY|ShiftMask,       XK_m,               spawn,                  {.v = perpcmd } },
+	{ MODKEY,                 XK_q,               spawn,                  {.v = quickmarkcmd } },
 	{ MODKEY,                 XK_e,               spawn,                  {.v = emacs } },
 	{ MODKEY,                 XK_space,           spawn,                  {.v = dmenucmd } },
 	{ MODKEY,                 XK_Return,          spawn,                  {.v = termcmd } },
