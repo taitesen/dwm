@@ -25,13 +25,13 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class                         instance    title       tags mask     isfloating   monitor */
-	{ "Gimp",                        NULL,       NULL,       0,            1,           -1 },
-	{ "firefox-developer-edition",   NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "qutebrowser",                 NULL,       NULL,       1 << 2,       1,           -1 },
-	{ "mpv",                         NULL,       NULL,       1 << 8,       0,           -1 },
-	{ "Emacs",                       NULL,       NULL,       1 << 5,       1,           -1 },
-	{ "floatingst",                  NULL,       NULL,       0,            1,           -1 },
+	/* class                         instance    title       tags mask     isfloating   monitor    float x,y,w,h         floatborderpx*/
+	{ "Gimp",                        NULL,       NULL,       0,            1,           -1,        50,50,500,500,        -1 },
+	{ "firefox-developer-edition",   NULL,       NULL,       1 << 1,       0,           -1,        50,50,500,500,        -1 },
+	{ "qutebrowser",                 NULL,       NULL,       1 << 2,       0,           -1,        50,50,500,500,        -1 },
+	{ "mpv",                         NULL,       NULL,       1 << 8,       0,           -1,        50,50,500,500,        -1 },
+	{ "Emacs",                       NULL,       NULL,       1 << 5,       1,           -1,        50,50,500,500,        -1 },
+	{ "floatingst",                  NULL,       NULL,       0,            1,           -1,        2,2,800,300,           1 },
 };
 
 /* layout(s) */

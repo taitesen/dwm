@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
-
-read -p "Eng nge i search duh: " searchString
+cols=$(tput cols)
+message="(PERPLEXITY AI): Eng nge i search duh?"
+col=$(( (cols - ${#message}) / 2))
+clear
+tput cup 0 $col
+echo "$message"
+tput sgr0
+read searchString
 setsid firefox-developer-edition "https://perplexity.ai/search?q=${searchString// /+}"
 sleep 0.5
 
