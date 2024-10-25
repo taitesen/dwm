@@ -23,33 +23,3 @@ staged = "::staged"
 renamed = "::renamed"
 deleted = "::deleted"
 stashed = "::stashed"
-
-[c]
-symbol = " "
-
-[golang]
-symbol = " "
-
-[haskell]
-symbol = " "
-
-[java]
-symbol = " "
-
-[lua]
-symbol = " "
-
-[nodejs]
-symbol = " "
-
-[php]
-symbol = " "
-
-[python]
-symbol = " "
-
-[rust]
-symbol = "󱘗 "
-
-[zig]
-symbol = " "

@@ -1,13 +1,13 @@
 !! Transparency (0-1):
-st.alpha: 0.9
+st.alpha: 0.8
 st.alphaOffset: +0.05
 
 !! Set a default font and font size as below:
 /*st.font: ComicShannsMono Nerd Font:style=Light:size=19*/
 /*st.font: Terminess Nerd Font Propo:style=Bold:size=18*/
 /*st.font: IosevkaTerm NFP Medium:style=Bold:size=20*/
-st.font: IosevkaTerm NFP Light:style=Light:size=20
-/*st.font: RobotoMono Nerd Font Propo Lt:style=Light:size=19*/
+st.font: IosevkaTerm NFP Light:style=Light:size=23
+/*st.font: Comic Code Ligatures Light:style=Light:size=21*/
 
 
 

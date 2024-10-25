@@ -26,7 +26,6 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-
 # start some nice programs
 if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
@@ -36,7 +35,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 setxkbmap us &
-feh --bg-max ~/Vaults/git/dotfiles/wallpapers/2.* &
+feh --bg-max ~/Vaults/git/dotfiles/wallpapers/8.* &
+/usr/bin/emacs --daemon &
 picom -f &
 dwmblocks &
 xset r rate 300 60 &
@@ -48,3 +48,6 @@ done
 
 # Execute DWM
 exec dwm
+
+
+

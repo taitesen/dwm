@@ -8,6 +8,7 @@ export EDITOR="nvim"
 export BROWSER="firefox-developer-edition"
 export READER="zathura"
 
+export WEZTERM_CONFIG_FILE="$HOME/Vaults/git/dotfiles/config/wezterm/"
 export ZDOTDIR="$HOME/Vaults/git/dotfiles/config/zsh"
 export ds=$HOME/Vaults/git/dataStructure
 export dot=$HOME/Vaults/git/dotfiles
