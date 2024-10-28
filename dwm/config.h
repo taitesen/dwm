@@ -32,8 +32,8 @@ static const Rule rules[] = {
 	{ "qutebrowser",                 NULL,       NULL,       1 << 2,       0,           -1,        50,50,500,500,        -1 },
 	{ "mpv",                         NULL,       NULL,       1 << 8,       0,           -1,        50,50,500,500,        -1 },
 	{ "Emacs",                       NULL,       NULL,       1 << 5,       1,           -1,        310,10,1300,1020,      -1 },
-	{ "floatingst",                  NULL,       NULL,       0,            1,           -1,        510,10,900,400,      10 },
-	{ "smallfloatingst",             NULL,       NULL,       0,            1,           -1,        510,10,900,200,      10 },
+	{ "floatingst",                  NULL,       NULL,       0,            1,           -1,        460,10,1000,400,      10 },
+	{ "smallfloatingst",             NULL,       NULL,       0,            1,           -1,        460,10,1000,100,      10 },
 };
 
 /* layout(s) */
@@ -67,11 +67,11 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *screenshot[]  = { "flameshot", "gui", NULL };
 static const char *toggleblur[]  = { "toggleblur", NULL };
 static const char *emacs[]  = { "emacs", NULL };
-static const char *quickmarkcmd[] = { "st", "-c", "floatingst", "-e", "ff", NULL };
-static const char *gogglecmd[] = { "st", "-c", "smallfloatingst", "-e", "googleSearch", NULL };
-static const char *perpcmd[] = { "st", "-c", "smallfloatingst", "-e", "perpSearch", NULL };
-static const char *ytcmd[] = { "st", "-c", "smallfloatingst", "-e", "yt", NULL };
-static const char *zathuracmd[] = { "st", "-c", "floatingst", "-e", "zathuracmd", NULL };
+static const char *quickmarkcmd[] = { "st", "-c", "floatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "ff", NULL };
+static const char *gogglecmd[] = { "st", "-c", "smallfloatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "googleSearch", NULL };
+static const char *perpcmd[] = { "st", "-c", "smallfloatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "perpSearch", NULL };
+static const char *ytcmd[] = { "st", "-c", "smallfloatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "yt", NULL };
+static const char *zathuracmd[] = { "st", "-c", "floatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "zathuracmd", NULL };
 
 static const Key keys[] = {
 	/* modifier               key                 function                argument */
