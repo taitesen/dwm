@@ -29,8 +29,8 @@ config.colors = {
 config.keys = {
     { key = "c", mods = "ALT", action = wezterm.action.CopyTo("Clipboard") },
     { key = "v", mods = "ALT", action = wezterm.action.PasteFrom("Clipboard") },
-    { key = "j", mods = "ALT", action = wezterm.action.ScrollByPage(1) },  -- Scroll down
-    { key = "k", mods = "ALT", action = wezterm.action.ScrollByPage(-1) }, -- Scroll up
+    { key = "j", mods = "ALT", action = wezterm.action.ScrollByLine(1) },  -- Scroll down
+    { key = "k", mods = "ALT", action = wezterm.action.ScrollByLine(-1) }, -- Scroll up
 }
 -- and finally, return the configuration to wezterm
 return config
