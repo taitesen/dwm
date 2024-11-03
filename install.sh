@@ -33,7 +33,7 @@ git clone https://github.com/taitesen/nvim.git $OG_PATH
 # Installing yay AUR helper
 if ! command -v yay &> /dev/null
 then
-    cd /tmp
+    mkdir -p ~/.local/bin && cd ~/.local/bin
     git clone https://aur.archlinux.org/yay.git
     cd yay
     makepkg -si
@@ -57,8 +57,9 @@ cp -r .xinitrc .zprofile .Xresources .tmux.conf $HOME
 
 config_items=(
     "fastfetch"
-    "kitty"
-    "ohmyposh"
+    "zathura"
+    "mpd"
+    "ncmpcpp"
     "picom"
     "qutebrowser"
     "starship.toml"
