@@ -1,18 +1,17 @@
 #!/bin/bash
-
 if [ $# -ne 1 ]
 then
     echo "the script requires the name for the file"
     exit 1
 fi
-
 if [ -f $1 ]
 then
     echo "the file name '$1' is taken"
     exit 2
 fi
-
 if [ ! -f $1 ]
 then
-    ffmpeg -y -video_size 1920x1080 -framerate 30 -f x11grab -i :0.0 -f pulse -ac 2 -i default $HOME/Videos/ffmpeg/$1.mkv
+    ffmpeg -y -video_size 1920x1080 -framerate 48 -f x11grab -i :0.0 \
+    -f pulse -i @DEFAULT_MONITOR@ \
+    $HOME/Videos/ffmpeg/$1.mkv
 fi
