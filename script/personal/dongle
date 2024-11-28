@@ -20,16 +20,20 @@ env_selector() {
     full_line=$(grep "^$selected=" "$ENV_FILE")
     value=$(echo "$full_line" | cut -d '=' -f 2-)
 
+    export DISPLAY=:0
+
     if command -v xclip &> /dev/null; then
         echo -n "$value" | xclip -selection clipboard
         echo -n "$value" | xclip -selection primary
+    fi
 
-        if command -v notify-send &> /dev/null; then
-            notify-send "Boss lo ti buai lok che" "$selected copied to clipboard"
-        fi
-    else
-        echo "xclip tool not found"
-        return 1
+    if command -v xsel &> /dev/null; then
+        echo -n "$value" | xsel -p
+        echo -n "$value" | xsel -b
+    fi
+
+    if command -v notify-send &> /dev/null; then
+        notify-send "Boss lo ti buai lok che" "$selected copied to clipboard"
     fi
 }
 
