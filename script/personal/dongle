@@ -22,7 +22,11 @@ env_selector() {
 
     if command -v xclip &> /dev/null; then
         echo -n "$value" | xclip -selection clipboard
-        echo "Copied $selected info to clipboard"
+        echo -n "$value" | xclip -selection primary
+
+        if command -v notify-send &> /dev/null; then
+            notify-send "Boss lo ti buai lok che" "$selected copied to clipboard"
+        fi
     else
         echo "xclip tool not found"
         return 1
