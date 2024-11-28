@@ -19,6 +19,10 @@ bindkey -e
 autoload -U compinit
 compinit
 
+if [ -f ~/.env ]; then
+    export $(cat ~/.env | xargs)
+fi
+
 bup(){
     brightnessctl set "$1%+"
 }
