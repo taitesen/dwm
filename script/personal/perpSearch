@@ -7,7 +7,7 @@ tput cup 0 $col
 echo "$message"
 tput sgr0
 read searchString
-(setsid vivaldi-stable "https://perplexity.ai/search?q=${searchString// /+}" >/dev/null 2>&1 &)
+(setsid zen-browser "https://perplexity.ai/search?q=${searchString// /+}" >/dev/null 2>&1 &)
 sleep 0.3
 disown
 exit 0
