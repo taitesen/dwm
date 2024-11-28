@@ -14,12 +14,10 @@ alias refresh='xset r rate 300 60; source $dot/config/zsh/.zshrc ~/.zprofile; xr
 alias nvim='XDG_CONFIG_HOME=/home/taitesen/Vaults/git nvim'
 alias list='fc-list | sed -e "s/^[^:]*://g"'
 
-function nmain() {
-    nvim "$@"
-    ./main
-}
-
 bindkey -e
+
+autoload -U compinit
+compinit
 
 bup(){
     brightnessctl set "$1%+"

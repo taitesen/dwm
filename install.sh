@@ -1,5 +1,13 @@
 #!/usr/bin/env bash
 
+# Create Directories
+cd "$HOME"
+mkdir -p Documents Downloads Pictures Videos Music Workspaces Vaults/git
+
+OG_PATH="$HOME/Vaults/git"
+mv dotfiles $OG_PATH
+cd $OG_PATH/dotfiles
+
 # Update first
 sudo pacman -Syu --noconfirm --needed base-devel
 
@@ -12,11 +20,6 @@ sudo pacman -S --noconfirm --needed $(< packages/core.txt)
 # Install utility
 sudo pacman -S --noconfirm --needed $(< packages/utility.txt)
 
-# Create Directories
-cd "$HOME"
-mkdir -p Documents Downloads Pictures Videos Music Workspaces Vaults/git
-
-OG_PATH="$HOME/Vaults/git"
 
 # Changing default shell to zsh
 ZSH_PATH=$(which zsh)
@@ -42,17 +45,8 @@ fi
 # Installing additional softwares via yay
 yay -S --noconfirm ueberzugpp vesktop-bin picom-git
 
-# Cloning my dwm repo
-cd $OG_PATH
-if ! git clone https://github.com/taitesen/dwm.git; then
-    echo "Failed to clone dwm repository"
-    exit 1
-fi
-
-mv dwm dotfiles
-
 # Copying config files
-cd dotfiles/config/
+cd $OG_PATH/dotfiles/config/
 cp -r .xinitrc .zprofile .Xresources .tmux.conf $HOME
 
 config_items=(
@@ -76,7 +70,7 @@ done
 dirs=(
     "dwm"
     "dmenu"
-    "slstatus"
+    "dwmblocks"
     "st"
  )
 for item in "${dirs[@]}"; do
