@@ -34,6 +34,7 @@ static const Rule rules[] = {
 	{ "Emacs",                       NULL,       NULL,       1 << 5,       1,           -1,        310,10,1300,1020,      -1 },
 	{ "floatingst",                  NULL,       NULL,       0,            1,           -1,        460,10,1000,400,      10 },
 	{ "smallfloatingst",             NULL,       NULL,       0,            1,           -1,        460,10,1000,100,      10 },
+	{ "pwSt",                        NULL,       NULL,       0,            1,           -1,        10,10,300,600,      10 },
 };
 
 /* layout(s) */
@@ -68,7 +69,7 @@ static const char *screenshot[]  = { "flameshot", "gui", NULL };
 static const char *toggleblur[]  = { "toggleblur", NULL };
 static const char *emacs[]  = { "emacs", NULL };
 static const char *quickmarkcmd[] = { "st", "-c", "floatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "ff", NULL };
-static const char *pwdClipboard[] = { "st", "-c", "floatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "dongle", NULL };
+static const char *pwdClipboard[] = { "st", "-c", "pwSt", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "dongle", NULL };
 static const char *gogglecmd[] = { "st", "-c", "smallfloatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "googleSearch", NULL };
 static const char *perpcmd[] = { "st", "-c", "smallfloatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "perpSearch", NULL };
 static const char *ytcmd[] = { "st", "-c", "smallfloatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "yt", NULL };
