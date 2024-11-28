@@ -10,6 +10,7 @@ nsxiv
 man-db
 mpc
 mpd
+mpv
 ncmpcpp
 python3
 python-pip

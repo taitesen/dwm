@@ -6,3 +6,9 @@ libxft
 libxinerama
 qutebrowser
 feh
+pipewire
+wireplumber
+pipewire-audio
+pipewire-alsa
+pipewire-pulse
+sof-firmware

@@ -9,7 +9,7 @@ fi
 # Extract URL and ensure it's not empty
 url=$(echo "$selected" | cut -d' ' -f2)
 if [ -n "$url" ]; then
-    (setsid zen-browser "$url" >/dev/null 2>&1 &)
+    (setsid vivaldi-stable "$url" >/dev/null 2>&1 &)
     sleep 0.5
     disown
     exit 0

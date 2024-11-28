@@ -20,6 +20,9 @@ sudo pacman -S --noconfirm --needed $(< packages/core.txt)
 # Install utility
 sudo pacman -S --noconfirm --needed $(< packages/utility.txt)
 
+# Install nvidia-utils
+sudo pacman -S --noconfirm --needed $(< packages/nvidia-utils.txt)
+
 
 # Changing default shell to zsh
 ZSH_PATH=$(which zsh)
@@ -43,7 +46,7 @@ then
 fi
 
 # Installing additional softwares via yay
-yay -S --noconfirm ueberzugpp vesktop-bin picom-git
+yay -S --noconfirm ueberzugpp vesktop-bin picom-git libva-nvidia-driver-git
 
 # Copying config files
 cd $OG_PATH/dotfiles/config/
