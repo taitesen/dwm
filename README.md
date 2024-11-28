@@ -102,7 +102,7 @@ Mod Key (Win) is the default modifier key. <br>
 <kbd>Mod + Shift + b</kbd>: Toggle blur <br>
 <kbd>Mod + b</kbd>: Toggle bar <br>
 
-#### 5. Screenshots
+### 5. Screenshots
 Here are some screenshots of the setup:
 ##### Old Screenshot
 ![Screen shot](screenshot/FullScreenshot.png)
@@ -130,7 +130,7 @@ Here are some screenshots of the setup:
 - Random
 ![waterall](screenshot/watafallss.png)
 ---
-#### 6. Troubleshooting
+### 6. Troubleshooting
 If you encounter issues during installation, here are a few things to check:
 
 **Missing Dependencies**: Ensure that your system is up-to-date and that you have all the required tools installed (e.g., `git`, `yay`, `make`, etc.). <br>
@@ -142,11 +142,11 @@ sudo pacman -S zsh
 ```bash
 sudo reboot
 ```
-#### 7. Customization
+### 7. Customization
 Feel free to modify the configuration files and customize the setup as per your needs. You can edit the dotfiles in the `~/Vaults/git/dotfiles` directory or change the keybindings in the DWM configuration.
 
-### License
+## License
 This project is licensed under the MIT License. See the LICENSE file for more details.
 
-### Conclusion
+## Conclusion
 By following the above steps, you should have a fully functional Arch Linux environment with DWM, Neovim, Picom, and other utilities configured and ready to use. If you have any questions or encounter issues, feel free to open an issue in the repository.
