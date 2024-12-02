@@ -1506,7 +1506,6 @@ _comps=(
 'ypxfr' '_yp'
 'ytalk' '_other_accounts'
 'yt-dlp' '_yt-dlp'
-'z' '__zoxide_z_complete'
 'zargs' '_zargs'
 'zathura' '_zathura'
 'zcalc' '_zcalc'
