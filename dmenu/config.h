@@ -9,7 +9,7 @@ static const float menu_height_ratio = 4.0f;  /* This is the ratio used in the o
 
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
-    "Terminess Nerd Font:size=18:antialias:true:autohint=true:style=Bold",
+    "Terminess Nerd Font:size=15:antialias:true:autohint=true:style=Bold",
     "monospace:size=15:antialias=true:autohint=true"};
 
 static const char *prompt = NULL ; /* -p  option; prompt to the left of input field */
@@ -29,8 +29,8 @@ static const unsigned int alphas[SchemeLast][2] = {
 static unsigned int lines = 0;
 
 /* -h option; minimum height of a menu line */
-static unsigned int lineheight = 30;
-static unsigned int min_lineheight = 10;
+static unsigned int lineheight = 15;
+static unsigned int min_lineheight = 0;
 
 /*
  * Characters not considered part of a word while deleting words
