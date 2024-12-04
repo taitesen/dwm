@@ -40,6 +40,7 @@ feh --bg-max ~/Vaults/git/dotfiles/wallpapers/6.* &
 picom -f &
 dwmblocks &
 xset r rate 300 60 &
+betterbird &
 
 # Loop
 while true; do

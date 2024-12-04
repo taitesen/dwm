@@ -28,13 +28,14 @@ static const Rule rules[] = {
 	/* class                         instance    title       tags mask     isfloating   monitor    float x,y,w,h         floatborderpx*/
 	{ "Gimp",                        NULL,       NULL,       0,            1,           -1,        50,50,500,500,        -1 },
 	{ "zen-alpha",                   NULL,       NULL,       1 << 1,       0,           -1,        50,50,500,500,        -1 },
-	{ "Zathura",                     NULL,       NULL,       1 << 3,       0,           -1,        50,50,500,500,        -1 },
 	{ "qutebrowser",                 NULL,       NULL,       1 << 2,       0,           -1,        50,50,500,500,        -1 },
+	{ "Zathura",                     NULL,       NULL,       1 << 3,       0,           -1,        50,50,500,500,        -1 },
+	{ "eu.betterbird.Betterbird",    NULL,       NULL,       1 << 4,       0,           -1,        50,50,500,500,        -1 },
+	{ "Emacs",                       NULL,       NULL,       1 << 5,       1,           -1,        310,10,1300,1020,     -1 },
 	{ "mpv",                         NULL,       NULL,       1 << 8,       0,           -1,        50,50,500,500,        -1 },
-	{ "Emacs",                       NULL,       NULL,       1 << 5,       1,           -1,        310,10,1300,1020,      -1 },
 	{ "floatingst",                  NULL,       NULL,       0,            1,           -1,        460,10,1000,400,      10 },
 	{ "smallfloatingst",             NULL,       NULL,       0,            1,           -1,        460,10,1000,100,      10 },
-	{ "pwSt",                        NULL,       NULL,       0,            1,           -1,        10,10,300,600,      10 },
+	{ "pwSt",                        NULL,       NULL,       0,            1,           -1,        10,10,300,600,        10 },
 };
 
 /* layout(s) */
