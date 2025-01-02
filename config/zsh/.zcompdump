@@ -1639,7 +1639,6 @@ _compautos=(
 '_call_program' '+X'
 )
 
-zle -C __fzf_extract_command .complete-word __fzf_extract_command
 zle -C _bash_complete-word .complete-word _bash_completions
 zle -C _bash_list-choices .list-choices _bash_completions
 zle -C _complete_debug .complete-word _complete_debug
