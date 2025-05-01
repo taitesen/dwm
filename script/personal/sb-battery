@@ -4,8 +4,14 @@ black=#EBBCBA
 
 CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)
 STATUS=$(cat /sys/class/power_supply/BAT0/status)
-if [ "$STATUS" = "Charging" ]; then
-	printf "^B4^^c$black^  ^d^ ^C4^$CHARGE%% $STATUS "
+# if [ "$STATUS" = "Charging" ]; then
+# 	printf "^B4^^c$black^  ^d^ ^C4^$CHARGE%% $STATUS "
+# else
+# 	printf "^B4^^c$black^  ^d^ ^C4^$CHARGE%% $STATUS "
+# fi
+
+if [ "$STATUS" = "Charging" ] || [ "$STATUS" = "Full" ]; then
+	printf "^B4^^c$black^ 󰂄^d^^C4^$CHARGE%% "
 else
-	printf "^B4^^c$black^  ^d^ ^C4^$CHARGE%% $STATUS "
+	printf "^B4^^c$black^ 󱟨^d^^C4^$CHARGE%% "
 fi
