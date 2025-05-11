@@ -18,7 +18,7 @@ export git=$HOME/Vaults/git
 [ ! -s ~/.config/mpd/pid ] && mpd
 
 # This needs to lived here
-alias refresh='xset r rate 300 60; source $dot/config/zsh/.zshrc ~/.zprofile; xrdb ~/.Xresources'
+alias refresh='xset r rate 300 60; source $dot/config/zsh/.zshrc ~/.zprofile; xrdb ~/.Xresources; sudo reflector --latest 10 --sort rate --save /etc/pacman.d/mirrorlist'
 
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
   exec startx &>/dev/null

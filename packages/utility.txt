@@ -38,3 +38,4 @@ brightnessctl
 xclip
 xsel
 obs-studio
+reflector
