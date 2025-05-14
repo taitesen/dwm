@@ -39,9 +39,9 @@ static const Rule rules[] = {
 	{ "eu.betterbird.Betterbird",    NULL,       NULL,       1 << 4,       0,           -1,        50,50,500,500,        -1 },
 	{ "Emacs",                       NULL,       NULL,       1 << 5,       1,           -1,        310,10,1300,1020,     -1 },
 	{ "mpv",                         NULL,       NULL,       1 << 8,       0,           -1,        50,50,500,500,        -1 },
-	{ "floatingst",                  NULL,       NULL,       0,            1,           -1,        460,10,1000,400,      10 },
-	{ "smallfloatingst",             NULL,       NULL,       0,            1,           -1,        460,10,1000,100,      10 },
-	{ "pwSt",                        NULL,       NULL,       0,            1,           -1,        10,10,300,600,        10 },
+	{ "rectangle",                   NULL,       NULL,       0,            1,           -1,        460,10,1000,400,      10 },
+	{ "horizontal-rectangle",        NULL,       NULL,       0,            1,           -1,        460,10,1000,100,      10 },
+	{ "vertical-rectangle",          NULL,       NULL,       0,            1,           -1,        10,10,300,600,        10 },
 };
 
 /* layout(s) */
@@ -75,12 +75,13 @@ static const char *termcmd[]  = { "ghostty", NULL };
 static const char *screenshot[]  = { "flameshot", "gui", NULL };
 static const char *toggleblur[]  = { "toggleblur", NULL };
 static const char *emacs[]  = { "emacs", NULL };
-static const char *quickmarkcmd[] = { "st", "-c", "floatingst", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "ff", NULL };
-static const char *pwdClipboard[] = { "st", "-c", "pwSt", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "dongle", NULL };
-static const char *gogglecmd[] = { "st", "-c", "smallfloatingst", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "googleSearch", NULL };
-static const char *perpcmd[] = { "st", "-c", "smallfloatingst", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "perpSearch", NULL };
-static const char *ytcmd[] = { "st", "-c", "smallfloatingst", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "yt", NULL };
-static const char *zathuracmd[] = { "st", "-c", "floatingst", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "zathuracmd", NULL };
+static const char *quickmarkcmd[] = { "st", "-c", "rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "ff", NULL };
+static const char *pwdClipboard[] = { "st", "-c", "rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "passwordSearch", NULL };
+static const char *pwdManager[] = { "st", "-c", "horizontal-rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "passwordManager", NULL };
+static const char *gogglecmd[] = { "st", "-c", "horizontal-rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "googleSearch", NULL };
+static const char *perpcmd[] = { "st", "-c", "horizontal-rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "perpSearch", NULL };
+static const char *ytcmd[] = { "st", "-c", "horizontal-rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "yt", NULL };
+static const char *zathuracmd[] = { "st", "-c", "rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "zathuracmd", NULL };
 
 static const Key keys[] = {
 	/* modifier                      key                 function                argument */
@@ -92,6 +93,7 @@ static const Key keys[] = {
 	{ MODKEY,                        XK_e,               spawn,                  {.v = emacs } },
 	{ MODKEY,                        XK_space,           spawn,                  {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,              XK_space,           spawn,                  {.v = pwdClipboard } },
+	{ MODKEY|ShiftMask,              XK_c,               spawn,                  {.v = pwdManager} },
 	{ MODKEY,                        XK_Return,          spawn,                  {.v = termcmd } },
 	{ MODKEY|ShiftMask,              XK_s,               spawn,                  {.v = screenshot } },
 	{ MODKEY|ShiftMask,              XK_b,               spawn,                  {.v = toggleblur } },
