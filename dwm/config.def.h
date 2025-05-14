@@ -75,12 +75,12 @@ static const char *termcmd[]  = { "ghostty", NULL };
 static const char *screenshot[]  = { "flameshot", "gui", NULL };
 static const char *toggleblur[]  = { "toggleblur", NULL };
 static const char *emacs[]  = { "emacs", NULL };
-static const char *quickmarkcmd[] = { "st", "-c", "floatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "ff", NULL };
-static const char *pwdClipboard[] = { "st", "-c", "pwSt", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "dongle", NULL };
-static const char *gogglecmd[] = { "st", "-c", "smallfloatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "googleSearch", NULL };
-static const char *perpcmd[] = { "st", "-c", "smallfloatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "perpSearch", NULL };
-static const char *ytcmd[] = { "st", "-c", "smallfloatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "yt", NULL };
-static const char *zathuracmd[] = { "st", "-c", "floatingst", "-f", "Terminess Nerd Font:style=Bold:size=19", "-e", "zathuracmd", NULL };
+static const char *quickmarkcmd[] = { "st", "-c", "floatingst", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "ff", NULL };
+static const char *pwdClipboard[] = { "st", "-c", "pwSt", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "dongle", NULL };
+static const char *gogglecmd[] = { "st", "-c", "smallfloatingst", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "googleSearch", NULL };
+static const char *perpcmd[] = { "st", "-c", "smallfloatingst", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "perpSearch", NULL };
+static const char *ytcmd[] = { "st", "-c", "smallfloatingst", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "yt", NULL };
+static const char *zathuracmd[] = { "st", "-c", "floatingst", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "zathuracmd", NULL };
 
 static const Key keys[] = {
 	/* modifier                      key                 function                argument */
