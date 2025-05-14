@@ -1,0 +1,36 @@
+#   /home/taitesen/.config/ghostty/config
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+gtk-titlebar = false
+background = #000000
+background-opacity = 0.80
+background-blur-radius = 40
+shell-integration-features = no-cursor,no-sudo,title
+
+font-family = IosevkaTerm Nerd Font
+# font-family = Maple Mono NF CN
+# font-family = ComicShannsMono Nerd Font
+font-size = 21
+cursor-style = block
+cursor-style-blink = false
+adjust-cell-height = 10%
+
+
+mouse-hide-while-typing = true
+
+window-decoration = true
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
+keybind = performable:alt+c=copy_to_clipboard
+keybind = performable:alt+v=paste_from_clipboard
+
+keybind = alt+k=scroll_page_fractional:-0.05
+keybind = alt+j=scroll_page_fractional:0.05
+
