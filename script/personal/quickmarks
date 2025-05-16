@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-bookmark_file="$HOME/.config/qutebrowser/quickmarks"
+bookmark_file="$HOME/.quickmarks"
+
+if [[ ! -f "$bookmark_file" ]]; then
+    touch "$bookmark_file"
+fi
+
 selected=$(cat "$bookmark_file" | fzf --reverse --border=sharp --border-label=" Quickmarks ")
 
 if [ -z "$selected" ]; then

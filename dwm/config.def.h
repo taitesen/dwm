@@ -75,7 +75,8 @@ static const char *termcmd[]  = { "kitty", NULL };
 static const char *screenshot[]  = { "flameshot", "gui", NULL };
 static const char *toggleblur[]  = { "toggleblur", NULL };
 static const char *emacs[]  = { "emacs", NULL };
-static const char *quickmarkcmd[] = { "st", "-c", "rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "ff", NULL };
+static const char *quickmarkcmd[] = { "st", "-c", "rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "quickmarks", NULL };
+static const char *quickmarkManager[] = { "st", "-c", "horizontal-rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "quickmarkManager", NULL };
 static const char *pwdClipboard[] = { "st", "-c", "rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "passwordSearch", NULL };
 static const char *pwdManager[] = { "st", "-c", "horizontal-rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "passwordManager", NULL };
 static const char *gogglecmd[] = { "st", "-c", "horizontal-rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "googleSearch", NULL };
@@ -94,6 +95,7 @@ static const Key keys[] = {
 	{ MODKEY,                        XK_space,           spawn,                  {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,              XK_space,           spawn,                  {.v = pwdClipboard } },
 	{ MODKEY|ShiftMask,              XK_c,               spawn,                  {.v = pwdManager} },
+	{ MODKEY|ShiftMask,              XK_w,               spawn,                  {.v = quickmarkManager} },
 	{ MODKEY,                        XK_Return,          spawn,                  {.v = termcmd } },
 	{ MODKEY|ShiftMask,              XK_s,               spawn,                  {.v = screenshot } },
 	{ MODKEY|ShiftMask,              XK_b,               spawn,                  {.v = toggleblur } },
