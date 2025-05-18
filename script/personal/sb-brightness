@@ -2,7 +2,8 @@
 pink="#EBBCBA"
 pink="#EBBCBA"
 blue="#7894ab"
-printf "^c$blue^ "
+light="#9ccfd8"
+printf "^c$light^ "
 
 current_brightness=$(cat /sys/class/backlight/*/brightness)
 max_brightness=120000

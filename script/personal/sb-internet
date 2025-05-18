@@ -2,9 +2,10 @@
 pink=#EBBCBA
 green="#a3b238"
 blue="#7894ab"
+light="#9ccfd8"
 case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	# up) printf "^c$blue^^B2^ 󰤨 ^d^%s" " ^C2^Connected" ;;
-	up) printf "^c$blue^^B2^ 󰤨 ^d^%s" ;;
-	# down) printf "^c$blue^^B2^ 󰤭 ^d^%s" " ^C2^Disconnected" ;;
-	down) printf "^c$blue^^B2^ 󰤭 ^d^%s" ;;
+	# up) printf "^c$light^^B2^ 󰤨 ^d^%s" " ^C2^Connected" ;;
+	up) printf "^c$light^^B2^ 󰤨 ^d^%s" ;;
+	# down) printf "^c$light^^B2^ 󰤭 ^d^%s" " ^C2^Disconnected" ;;
+	down) printf "^c$light^^B2^ 󰤭 ^d^%s" ;;
 esac

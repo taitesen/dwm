@@ -2,6 +2,7 @@
 pink=#EBBCBA
 green="#a3b238"
 blue="#7894ab"
+light="#9ccfd8"
 
 clock=$(date '+%I')
 
@@ -22,5 +23,5 @@ case "$clock" in
 esac
 
 
-printf "^c$blue^^B4^$icon"
+printf "^c$light^^B4^$icon"
 printf "^d^^C4^ $(date '+%H:%M')"

@@ -2,7 +2,8 @@
 pink="#EBBCBA"
 green="#a3b238"
 blue="#7894ab"
+light="#9ccfd8"
 
 cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
-printf "^B2^^c$blue^  "
+printf "^B2^^c$light^  "
 printf "^d^^C2^ $cpu_val"

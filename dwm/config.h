@@ -12,15 +12,16 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const int user_bh            = 35;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "Terminess Nerd Font:size=15:style=Bold:antialias=true:autohint=true", "Font Awesome 6 Free:size=16:antialias=true:autohint=true" };
-static const char col_gray[]       = "#6b6b6b";
+static const char col_gray[]        = "#6b6b6b";
 static const char col_black[]       = "#000000";
 static const char col_green[]       = "#a3b238";
-static const char col_blue[]       = "#7894ab";
+static const char col_blue[]        = "#7894ab";
+static const char col_light[]       = "#9ccfd8";
 static const char col_rose[]        = "#ebbcba";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray, col_black, col_black },
-	[SchemeSel]  = { col_blue, col_black,  col_blue },
+	[SchemeSel]  = { col_light, col_black,  col_light },
 };
 
 /* tagging */
