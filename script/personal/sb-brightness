@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 pink="#EBBCBA"
-green="#a3b238"
-printf "^c$green^ "
+pink="#EBBCBA"
+blue="#7894ab"
+printf "^c$blue^ "
 
 current_brightness=$(cat /sys/class/backlight/*/brightness)
 max_brightness=120000

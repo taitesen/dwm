@@ -15,12 +15,12 @@ static const char *fonts[]          = { "Terminess Nerd Font:size=15:style=Bold:
 static const char col_gray[]       = "#6b6b6b";
 static const char col_black[]       = "#000000";
 static const char col_green[]       = "#a3b238";
-static const char col_gray4[]       = "#eeeeee";
+static const char col_blue[]       = "#7894ab";
 static const char col_rose[]        = "#ebbcba";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray, col_black, col_black },
-	[SchemeSel]  = { col_green, col_black,  col_green },
+	[SchemeSel]  = { col_blue, col_black,  col_blue },
 };
 
 /* tagging */

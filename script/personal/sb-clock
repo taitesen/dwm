@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 pink=#EBBCBA
 green="#a3b238"
+blue="#7894ab"
 
 clock=$(date '+%I')
 
@@ -21,5 +22,5 @@ case "$clock" in
 esac
 
 
-printf "^c$green^^B4^$icon"
+printf "^c$blue^^B4^$icon"
 printf "^d^^C4^ $(date '+%H:%M')"

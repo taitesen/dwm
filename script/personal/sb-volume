@@ -1,11 +1,12 @@
 #!/usr/bin/env bash
 pink="#EBBCBA"
 green="#a3b238"
+blue="#7894ab"
 
 vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
 
 # If muted, print 󰖁 and exit.
-[ "$vol" != "${vol%\[MUTED\]}" ] && printf "^c$green^^B1^ 󰖁 ^d^" && exit
+[ "$vol" != "${vol%\[MUTED\]}" ] && printf "^c$blue^^B1^ 󰖁 ^d^" && exit
 
 vol="${vol#Volume: }"
 
@@ -22,7 +23,7 @@ case 1 in
 	$((vol >= 70)) ) icon="  " ;;
 	$((vol >= 30)) ) icon="  " ;;
 	$((vol >= 1)) ) icon="  " ;;
-	* ) printf "^c$green^^B1^ 󰖁 ^d^" && exit ;;
+	* ) printf "^c$blue^^B1^ 󰖁 ^d^" && exit ;;
 esac
 
-printf "^B1^^c$green^$icon^d^ $vol%%"
+printf "^B1^^c$blue^$icon^d^ $vol%%"
