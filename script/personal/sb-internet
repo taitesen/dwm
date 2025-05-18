@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
-black=#EBBCBA
+pink=#EBBCBA
+green="#a3b238"
 case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	# up) printf "^c$black^^B2^ 󰤨 ^d^%s" " ^C2^Connected" ;;
-	up) printf "^c$black^^B2^ 󰤨 ^d^%s" ;;
-	# down) printf "^c$black^^B2^ 󰤭 ^d^%s" " ^C2^Disconnected" ;;
-	down) printf "^c$black^^B2^ 󰤭 ^d^%s" ;;
+	# up) printf "^c$green^^B2^ 󰤨 ^d^%s" " ^C2^Connected" ;;
+	up) printf "^c$green^^B2^ 󰤨 ^d^%s" ;;
+	# down) printf "^c$green^^B2^ 󰤭 ^d^%s" " ^C2^Disconnected" ;;
+	down) printf "^c$green^^B2^ 󰤭 ^d^%s" ;;
 esac
