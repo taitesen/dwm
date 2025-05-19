@@ -35,7 +35,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 setxkbmap us &
-feh --bg-max ~/Vaults/git/dotfiles/wallpapers/9.* &
+feh --bg-max ~/Vaults/git/dotfiles/wallpapers/18.* &
 /usr/bin/emacs --daemon &
 picom -f &
 dwmblocks &
