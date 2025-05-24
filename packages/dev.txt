@@ -1,0 +1,5 @@
+strace
+ltrace
+gdb
+valgrind
+man-pages
