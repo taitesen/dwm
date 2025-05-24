@@ -77,19 +77,19 @@ c.colors.completion.item.selected.border.top = "#585b70"
 
 c.colors.completion.item.selected.border.bottom = "#585b70"
 
-c.colors.completion.item.selected.match.fg = "#ebbcba"
+c.colors.completion.item.selected.match.fg = "#7894ab"
 
 c.colors.completion.match.fg = "#cdd6f4"
 
-c.colors.completion.scrollbar.fg = "#ebbcba"
+c.colors.completion.scrollbar.fg = "#7894ab"
 
 c.colors.completion.scrollbar.bg = "#000000"
 
 c.colors.contextmenu.menu.bg = "#000000"
 
-c.colors.contextmenu.menu.fg = "#ebbcba"
+c.colors.contextmenu.menu.fg = "#7894ab"
 
-c.colors.contextmenu.selected.bg = "#ebbcba"
+c.colors.contextmenu.selected.bg = "#7894ab"
 
 c.colors.contextmenu.selected.fg = "#000000"
 
@@ -117,7 +117,7 @@ c.colors.downloads.error.bg = "#1e1e2e"
 
 c.colors.hints.bg = "#181825"
 
-c.colors.hints.fg = "#ebbcba"
+c.colors.hints.fg = "#7894ab"
 
 c.colors.hints.match.fg = "#bac2de"
 
@@ -139,13 +139,13 @@ c.colors.messages.warning.bg = "#6c7086"
 
 c.colors.messages.warning.border = "#181825"
 
-c.colors.messages.info.fg = "#ebbcba"
+c.colors.messages.info.fg = "#7894ab"
 
 c.colors.messages.info.bg = "#000000"
 
 c.colors.messages.info.border = "#181825"
 
-c.colors.prompts.fg = "#ebbcba"
+c.colors.prompts.fg = "#7894ab"
 
 c.colors.prompts.border = "1px solid #6c7086"
 
@@ -155,11 +155,11 @@ c.colors.prompts.selected.fg = "#f5e0dc"
 
 c.colors.prompts.selected.bg = "#585b70"
 
-c.colors.statusbar.normal.fg = "#ebbcba"
+c.colors.statusbar.normal.fg = "#7894ab"
 
 c.colors.statusbar.normal.bg = "#000000"
 
-c.colors.statusbar.insert.fg = "#ebbcba"
+c.colors.statusbar.insert.fg = "#7894ab"
 
 c.colors.statusbar.insert.bg = "#000000"
 
@@ -173,7 +173,7 @@ c.colors.statusbar.private.bg = "#181825"
 
 # Foreground color of the statusbar in command mode.
 # Type: QssColor
-c.colors.statusbar.command.fg = "#ebbcba"
+c.colors.statusbar.command.fg = "#7894ab"
 
 # Background color of the statusbar in command mode.
 # Type: QssColor
@@ -256,7 +256,7 @@ c.colors.tabs.odd.fg = "#6b6b6b"
 
 # Background color of unselected odd tabs.
 # Type: QtColor
-c.colors.tabs.odd.bg = "#3b3b3b"
+c.colors.tabs.odd.bg = "#000000"
 
 # Foreground color of unselected even tabs.
 # Type: QtColor
@@ -264,25 +264,25 @@ c.colors.tabs.even.fg = "#6b6b6b"
 
 # Background color of unselected even tabs.
 # Type: QtColor
-c.colors.tabs.even.bg = "#3b3b3b"
+c.colors.tabs.even.bg = "#000000"
 
 # Foreground color of selected odd tabs.
 # Type: QtColor
-c.colors.tabs.selected.odd.fg = "#ebbcba"
+c.colors.tabs.selected.odd.fg = "#000000"
 
 # Background color of selected odd tabs.
 # Type: QtColor
-c.colors.tabs.selected.odd.bg = "#000000"
+c.colors.tabs.selected.odd.bg = "#7894ab"
 
 # Foreground color of selected even tabs.
 # Type: QtColor
-c.colors.tabs.selected.even.fg = "#ebbcba"
+c.colors.tabs.selected.even.fg = "#000000"
 
 # Background color of selected even tabs.
 # Type: QtColor
-c.colors.tabs.selected.even.bg = "#000000"
+c.colors.tabs.selected.even.bg = "#7894ab"
 
-c.zoom.default = "150%"
+c.zoom.default = "100%"
 
 # Background color for webpages if unset (or empty to use the theme's
 # color).
@@ -291,12 +291,14 @@ c.colors.webpage.bg = "#000000"
 
 c.colors.webpage.darkmode.enabled = True
 
-c.fonts.default_size = "20px"
-c.fonts.web.size.default = 20
+c.fonts.default_size = "24px"
+c.fonts.web.size.default = 22
 
 c.completion.height = "20%"
-c.tabs.favicons.scale = 1.1
+c.tabs.favicons.scale = 1
 c.tabs.padding = {"bottom": 4, "left": 7, "right": 7, "top": 4}
+c.tabs.position = "left"
+c.tabs.width = '10%'
 c.fonts.default_family = "FreeSans"
 
 # Bindings for normal mode
