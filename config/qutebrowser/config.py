@@ -1,4 +1,5 @@
 config.load_autoconfig(False)
+c.content.user_stylesheets = ['~/.config/qutebrowser/styles/qute.css']
 
 config.set("content.cookies.accept", "all", "chrome-devtools://*")
 

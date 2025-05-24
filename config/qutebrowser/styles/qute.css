@@ -1,0 +1,19 @@
+/* Remove Youtube's pause/hover gradient overlay */
+.ytp-gradient-top, .ytp-gradient-bottom {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* Hide scrollbar for all elements */
+::-webkit-scrollbar {
+    display: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
+}
+
+/* Ensure scrolling still works */
+html {
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+}
