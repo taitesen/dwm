@@ -6,7 +6,7 @@ clear
 tput cup 0 $col
 echo "$message"
 tput sgr0
-read searchString
+read -r searchString
 (setsid zen-browser "https://google.com/search?q=${searchString// /+}" >/dev/null 2>&1 &)
 sleep 0.3
 disown
