@@ -1,0 +1,7 @@
+#+title: About
+
+1. core.txt file consist of a list of dwm pre-requisite packages.
+2. fonts.txt file consist of a list of all the font packages used in my setup plus extra fonts.
+3. utility.txt file consist of a list of packages which I am using, you can add more or remove some if not all.
+4. vm.txt file consist of a list of packages required to run a virtual machine.
+

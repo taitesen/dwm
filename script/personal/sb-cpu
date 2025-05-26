@@ -1,0 +1,10 @@
+#!/bin/sh
+pink="#EBBCBA"
+green="#a3b238"
+blue="#7894ab"
+light="#9ccfd8"
+brown="#bbac9b"
+
+cpu_val=$(grep -o "^[^ ]*" /proc/loadavg)
+printf "^B2^^c$brown^  "
+printf "^d^^C2^$cpu_val"

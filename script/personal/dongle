@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+
+env_selector() {
+    local ENV_FILE="$HOME/.env"
+
+    # Check if the .env file exists
+    if [[ ! -f "$ENV_FILE" ]]; then
+        echo "Error: .env file not found at $ENV_FILE"
+        return 1
+    fi
+
+    # Select an environment variable from the .env file using fzf
+    selected=$(grep -v '^#' "$ENV_FILE" | grep -v '^$' | cut -d '=' -f 1 | fzf)
+
+    if [[ -z "$selected" ]]; then
+        return 1
+    fi
+
+    # Find the full line containing the selected environment variable
+    full_line=$(grep "^$selected=" "$ENV_FILE")
+    value=$(echo "$full_line" | cut -d '=' -f 2-)
+
+    export DISPLAY=:0
+
+    if command -v xclip &> /dev/null; then
+        echo -n "$value" | xclip -selection clipboard
+        echo -n "$value" | xclip -selection primary
+    fi
+
+    if command -v xsel &> /dev/null; then
+        echo -n "$value" | xsel -p
+        echo -n "$value" | xsel -b
+    fi
+
+    if command -v notify-send &> /dev/null; then
+        notify-send "Boss lo ti buai lok che" "$selected copied to clipboard"
+    fi
+}
+
+env_selector

@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Check if the correct number of arguments is provided
+if [ "$#" -ne 3 ]; then
+    echo "Usage: $0 GITHUB_USERNAME REPO_NAME DIRECTORY"
+    exit 1
+fi
+
+GITHUB_USERNAME="$1"
+REPO_NAME="$2"
+DIRECTORY="$3"
+
+# Clone the repository with sparse checkout enabled
+git clone --depth 1 --filter=blob:none --sparse "https://github.com/$GITHUB_USERNAME/$REPO_NAME.git"
+
+# Change into the repository directory
+cd "$REPO_NAME" || { echo "Failed to enter directory: $REPO_NAME"; exit 1; }
+
+# Set up sparse checkout for the specified directory
+git sparse-checkout set "$DIRECTORY"
+
+# Checkout the files in the specified directory
+git checkout
+
+# Change into the specified directory
+cd "$DIRECTORY" || { echo "Failed to enter directory: $DIRECTORY"; exit 1; }
+
+echo "Successfully cloned $DIRECTORY from $REPO_NAME!"

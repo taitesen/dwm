@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+cols=$(tput cols)
+message="(ZEN-BROWSER): Enter the link"
+col=$(( (cols - ${#message}) / 2))
+clear
+tput cup 0 $col
+echo "$message"
+tput sgr0
+read -r searchString
+(setsid zen-browser "${searchString}" >/dev/null 2>&1 &)
+sleep 0.3
+disown
+exit 0

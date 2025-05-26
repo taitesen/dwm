@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+updates=$({ timeout 20 pacman -Qu 2>/dev/null || true; } | wc -l)
+
+
+if [ -z "$updates" ]; then
+    printf "^C6^^c#ebbcba^   Fully Updated"
+else
+    printf "^C6^^c#ebbcba^   ^c#6b6b6b^$updates"" updates"
+fi

@@ -1,0 +1,6 @@
+ttf-font-awesome
+ttf-terminus-nerd
+ttf-jetbrains-mono-nerd
+ttf-firacode-nerd
+ttf-iosevkaterm-nerd
+ttf-opensans

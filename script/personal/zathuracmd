@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+books="$HOME/Documents/book"
+selected=$(find "$books" -type f -name "*.pdf" | sed "s|.*/||" | fzf --reverse --border=sharp --border-label="Eng PDF nge i chhiar duh" )
+
+if [ -z "$selected" ]; then
+    exit 1
+fi
+
+pdf=$(echo "$selected")
+if [ -n "$pdf" ]; then
+    (setsid zathura "$books/$pdf" >/dev/null 2>&1 &)
+    sleep 0.3
+    disown
+    exit 0
+fi

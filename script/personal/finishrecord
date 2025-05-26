@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+# Set paths
+input_dir="/home/$USER"
+output_dir="/home/$USER/Videos/ffmpeg"
+
+# Create output directory if it doesn't exist
+mkdir -p "$output_dir"
+
+# Find source files
+video_file=$(ls "$input_dir"/video*.mkv 2>/dev/null | head -n 1)
+audio_file=$(ls "$input_dir"/audio*.wav 2>/dev/null | head -n 1)
+
+# Check if files exist
+if [[ ! -f "$video_file" ]]; then
+    echo "Screen recording not found in $input_dir (expecting video*.mkv)"
+    exit 1
+fi
+
+if [[ ! -f "$audio_file" ]]; then
+    echo "Audio file not found in $input_dir (expecting audio*.wav)"
+    exit 1
+fi
+
+# Generate unique filename (auto-increment)
+i=1
+while [[ -e "$output_dir/final_$(printf '%03d' $i).mkv" ]]; do
+    ((i++))
+done
+output_file="$output_dir/final_$(printf '%03d' $i).mkv"
+
+# Merge screen video with audio
+ffmpeg -i "$video_file" -i "$audio_file" -map 0 -map 1:a -c:v copy -shortest "$output_file"
+
+# Notify
+notify-send "Video edit finished: $output_file"

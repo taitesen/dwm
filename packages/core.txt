@@ -1,0 +1,15 @@
+xorg-server
+xorg-xinit
+xorg-xrandr
+xorg-xsetroot
+xorg-xdpyinfo
+libxft
+libxinerama
+qutebrowser
+feh
+pipewire
+wireplumber
+pipewire-audio
+pipewire-alsa
+pipewire-pulse
+sof-firmware

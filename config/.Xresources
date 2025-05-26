@@ -1,0 +1,114 @@
+!! Transparency (0-1):
+st.alpha: 0.8
+st.alphaOffset: +0.05
+
+!! Set a default font and font size as below:
+/*st.font: ComicShannsMono Nerd Font:style=Light:size=19*/
+/*st.font: Terminess Nerd Font Propo:style=Bold:size=18*/
+st.font: IosevkaTerm NFP Medium:style=SemiBold:size=20
+/*st.font: IosevkaTerm NFP Light:style=Light:size=23*/
+/*st.font: Comic Code Ligatures Light:style=Light:size=21*/
+
+
+
+st.termname: st-256color
+st.borderpx: 10
+
+!! Set the background, foreground and cursor colors as below:
+
+!! rosepine-custom -----------------------------------------
+/**.color0: #26233a*/
+/**.color1: #eb6f92*/
+/**.color2: #9ccf92*/
+/**.color3: #f6c177*/
+/**.color4: #31748f*/
+/**.color5: #c4a7e7*/
+/**.color6: #ebbcba*/
+/**.color7: #e0def4*/
+/**.color8: #6e6a86*/
+/**.color9: #eb6f92*/
+/**.color10: #9ccfd8*/
+/**.color11: #f6c177*/
+/**.color12: #31748f*/
+/**.color13: #c4a7ef*/
+/**.color14: #ebbcba*/
+/**.color15: #e0def4*/
+/**.background: #000000*/
+/**.foreground: #999999*/
+/**.cursorColor: #ebbcba*/
+!! rosepine-custom -----------------------------------------
+
+
+! special --------------------------------------------------
+/**.cursorColor:  #ebbcba*/
+/**/
+/*! black*/
+/**.color0:       #1f1d2e*/
+/**.color8:       #26233a*/
+/**/
+/*! red*/
+/**.color1:       #eb6f92*/
+/**.color9:       #eb6f92*/
+/**/
+/*! green*/
+/**.color2:       #f6c177*/
+/**.color10:      #f6c177*/
+/**/
+/*! yellow*/
+/**.color3:       #ebbcba*/
+/**.color11:      #ebbcba*/
+/**/
+/*! blue*/
+/**.color4:       #31748f*/
+/**.color12:      #31748f*/
+/**/
+/*! magenta*/
+/**.color5:       #c4a7e7*/
+/**.color13:      #c4a7e7*/
+/**/
+/*! cyan*/
+/**.color6:       #9ccfd8*/
+/**.color14:      #9ccfd8*/
+/**/
+/*! white*/
+/**.color7:       #6e6a86*/
+/**.color15:      #908caa*/
+! special --------------------------------------------------
+
+! custom theme ---------------------------------------------
+*.foreground:   #F9F1EA
+*.background:   #000000
+*.cursorColor:  #F9F1EA
+
+! black
+*.color0:       #3A3C41
+*.color8:       #A79E97
+
+! red
+*.color1:       #3F3C44
+*.color9:       #54505B
+
+! green
+*.color2:       #EBBCBA
+*.color10:      #4F5968
+
+! yellow
+*.color3:       #6C5D5F
+*.color11:      #907B7F
+
+! blue
+*.color4:       #2B6E7F
+*.color12:      #3A93AA
+
+! magenta
+*.color5:       #7B6868
+*.color13:      #A48A8B
+
+! cyan
+*.color6:       #B3A092
+*.color14:      #EFD6C2
+
+! white
+*.color7:       #EFE2D8
+*.color15:      #EFE2D8
+! ----------------------------------------------custom theme

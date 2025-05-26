@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+session=$(tmux ls | cut -d: -f1 | fzf --tmux bottom,80%,60%)
+
+if [ -n "$session" ]; then
+    if [ -n "$TMUX" ]; then
+        tmux switch-client -t "$session"
+    else
+        tmux attach-session -t "$session"
+    fi
+fi

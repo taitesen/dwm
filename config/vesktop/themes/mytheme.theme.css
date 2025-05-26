@@ -1,0 +1,26 @@
+/**
+ * @name mytheme
+ * @author Elisniper
+ * @version 1.2.0
+ * @description Discord Glass Wave Theme
+ * @source https://github.com/Elisniper/Glass-Wave
+ * @website https://xbased.net
+ * @BDEditor Glass Wave
+*/
+
+@import url('https://elisniper.github.io/Glass-Wave/release/import.css');
+
+:root {
+  --var-background: transparent;
+  --var-background-size: contain;
+  --var-background-position: center;
+  --var-accent: #0a4355;
+  --var-popout-color: rgba(10, 21, 21, 1);
+  --var-chat-bubbles-background: #0b2328;
+  --var-chat-mentioned: #3b594a;
+  --var-font: gg sans;
+}
+
+/* Any custom CSS below here */
+
+

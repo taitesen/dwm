@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+pink="#EBBCBA"
+green="#a3b238"
+blue="#7894ab"
+light="#9ccfd8"
+brown="#bbac9b"
+
+vol="$(wpctl get-volume @DEFAULT_AUDIO_SINK@)"
+
+# If muted, print 󰖁 and exit.
+[ "$vol" != "${vol%\[MUTED\]}" ] && printf "^c$brown^^B1^ 󰖁 ^d^" && exit
+
+vol="${vol#Volume: }"
+
+split() {
+	# For ommiting the . without calling and external program.
+	IFS=$2
+	set -- $1
+	printf '%s' "$@"
+}
+
+vol="$(printf "%.0f" "$(split "$vol" ".")")"
+
+case 1 in
+	$((vol >= 70)) ) icon="  " ;;
+	$((vol >= 30)) ) icon="  " ;;
+	$((vol >= 1)) ) icon="  " ;;
+	* ) printf "^c$brown^^B1^ 󰖁 ^d^" && exit ;;
+esac
+
+printf "^B1^^c$brown^$icon^d^$vol%%"

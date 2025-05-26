@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/taitesen/Vaults/git/dotfiles/wallpapers/8.jpg'

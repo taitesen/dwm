@@ -1,0 +1,229 @@
+#+TITLE: CONFIGURATION FILE: config.def.h
+* TABLE OF CONTENTS :toc:
+-  [[#about][ABOUT]]
+  - [[#dwm---dynamic-window-manager][DWM - DYNAMIC WINDOW MANAGER]]
+  - [[#requirements][REQUIREMENTS]]
+  - [[#installation][INSTALLATION]]
+  - [[#running-dwm][RUNNING DWM]]
+  - [[#configuration][CONFIGURATION]]
+- [[#general-settings][GENERAL SETTINGS]]
+- [[#font-configuration][FONT CONFIGURATION]]
+- [[#color-schemes][COLOR SCHEMES]]
+- [[#tagging][TAGGING]]
+- [[#window-rules][WINDOW RULES]]
+- [[#layouts][LAYOUT(S)]]
+- [[#key-definitions][KEY DEFINITIONS]]
+- [[#button-definition][BUTTON DEFINITION]]
+
+*  ABOUT
+** DWM - DYNAMIC WINDOW MANAGER
+dwm is an extremely fast, small, and dynamic window manager for X.
+
+** REQUIREMENTS
+In order to build dwm you need the Xlib header files.
+
+** INSTALLATION
+Edit config.mk to match your local setup (dwm is installed into
+the /usr/local namespace by default).
+
+Afterwards enter the following command to build and install dwm (if
+necessary as root):
+
+- make clean install
+
+** RUNNING DWM
+1. Add the following line to your .xinitrc to start dwm using startx:
+- exec dwm
+
+** CONFIGURATION
+The configuration of dwm is done by creating a custom config.def.h
+copy it info config.h and (re)compiling the source code.
+
+* GENERAL SETTINGS
+This section sets window properties such as border size and bar visibility.
+#+begin_src c
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int snap      = 0;       /* snap pixel */
+static const unsigned int gappih    = 10;       /* horiz inner gap between windows */
+static const unsigned int gappiv    = 10;       /* vert inner gap between windows */
+static const unsigned int gappoh    = 20;       /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov    = 20;       /* vert outer gap between windows and screen edge */
+static const int smartgaps          = 0;        /* 1 means no outer gap when there is only one window */
+static const int showbar            = 1;        /* 0 means no bar */
+static const int topbar             = 1;        /* 0 means bottom bar */
+static const int user_bh            = 35;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+#+end_src
+* FONT CONFIGURATION
+Defines the fonts used in the DWM status bar.
+#+begin_src c
+static const char *fonts[]          = { "Terminess Nerd Font:size=15:style=Bold:antialias=true:autohint=true", "Font Awesome 6 Free:size=16:antialias=true:autohint=true" };
+#+end_src
+* COLOR SCHEMES
+Specifies the color scheme for the UI components.
+#+begin_src c
+static const char col_gray[]       = "#6b6b6b";
+static const char col_black[]       = "#000000";
+static const char col_gray3[]       = "#bbbbbb";
+static const char col_gray4[]       = "#eeeeee";
+static const char col_rose[]        = "#ebbcba";
+static const char *colors[][3]      = {
+	/*               fg         bg         border   */
+	[SchemeNorm] = { col_gray, col_black, col_black },
+	[SchemeSel]  = { col_rose, col_black,  col_black },
+};
+#+end_src
+* TAGGING
+Defines tags (workspaces) used for managing different windows.
+#+begin_src c
+static const char *tags[] = { "U", "I", "O", "P", "H", "J", "K", "L", "N" };
+#+end_src
+* WINDOW RULES
+Specifies behavior for certain applications based on their class and title.
+#+begin_src c
+static const Rule rules[] = {
+	/* xprop(1):
+	 * WM_CLASS(STRING) = instance, class
+	 * WM_NAME(STRING) = title
+	 */
+	/* class                         instance    title       tags mask     isfloating   monitor    float x,y,w,h         floatborderpx*/
+	{ "Gimp",                        NULL,       NULL,       0,            1,           -1,        50,50,500,500,        -1 },
+	{ "zen-beta",                    NULL,       NULL,       1 << 1,       0,           -1,        50,50,500,500,        -1 },
+	{ "qutebrowser",                 NULL,       NULL,       1 << 2,       0,           -1,        50,50,500,500,        -1 },
+	{ "Zathura",                     NULL,       NULL,       1 << 3,       0,           -1,        50,50,500,500,        -1 },
+	{ "eu.betterbird.Betterbird",    NULL,       NULL,       1 << 4,       0,           -1,        50,50,500,500,        -1 },
+	{ "Emacs",                       NULL,       NULL,       1 << 5,       1,           -1,        310,10,1300,1020,     -1 },
+	{ "mpv",                         NULL,       NULL,       1 << 8,       0,           -1,        50,50,500,500,        -1 },
+	{ "rectangle",                   NULL,       NULL,       0,            1,           -1,        460,10,1000,400,      10 },
+	{ "horizontal-rectangle",        NULL,       NULL,       0,            1,           -1,        460,10,1000,100,      10 },
+	{ "vertical-rectangle",          NULL,       NULL,       0,            1,           -1,        10,10,300,600,        10 },
+};
+#+end_src
+
+* LAYOUT(S)
+Define window layout behaviours.
+#+begin_src c
+static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
+static const int nmaster     = 1;    /* number of clients in master area */
+static const int resizehints = 0;    /* 1 means respect size hints in tiled resizals */
+static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
+
+static const Layout layouts[] = {
+	/* symbol     arrange function */
+	{ " ",      tile },    /* first entry is default */
+	{ " ",      NULL },    /* no layout function means floating behavior */
+	{ " ",      monocle },
+};
+#+end_src
+
+* KEY DEFINITIONS
+Defines key bindings for various actions
+#+begin_src c
+#define MODKEY Mod4Mask
+#define TAGKEYS(KEY,TAG) \
+	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
+	{ MODKEY|Mod1Mask,              KEY,      toggleview,     {.ui = 1 << TAG} }, \
+	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
+	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
+
+/* helper for spawning shell commands in the pre dwm-5.0 fashion */
+#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
+
+/* commands */
+static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *dmenucmd[] = { "dmenu_run", NULL };
+static const char *termcmd[]  = { "ghostty", NULL };
+static const char *screenshot[]  = { "flameshot", "gui", NULL };
+static const char *toggleblur[]  = { "toggleblur", NULL };
+static const char *emacs[]  = { "emacs", NULL };
+static const char *quickmarkcmd[] = { "st", "-c", "rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "ff", NULL };
+static const char *pwdClipboard[] = { "st", "-c", "rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "passwordSearch", NULL };
+static const char *pwdManager[] = { "st", "-c", "horizontal-rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "passwordManager", NULL };
+static const char *gogglecmd[] = { "st", "-c", "horizontal-rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "googleSearch", NULL };
+static const char *perpcmd[] = { "st", "-c", "horizontal-rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "perpSearch", NULL };
+static const char *ytcmd[] = { "st", "-c", "horizontal-rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "yt", NULL };
+static const char *zathuracmd[] = { "st", "-c", "rectangle", "-f", "FiraCode Nerd Font Propo Ret:style=Retina:size=14", "-e", "zathuracmd", NULL };
+
+static const Key keys[] = {
+	/* modifier                      key                 function                argument */
+	{ MODKEY|ShiftMask,              XK_y,               spawn,                  {.v = zathuracmd } },
+	{ MODKEY,                        XK_y,               spawn,                  {.v = ytcmd } },
+	{ MODKEY,                        XK_m,               spawn,                  {.v = gogglecmd } },
+	{ MODKEY|ShiftMask,              XK_m,               spawn,                  {.v = perpcmd } },
+	{ MODKEY,                        XK_q,               spawn,                  {.v = quickmarkcmd } },
+	{ MODKEY,                        XK_e,               spawn,                  {.v = emacs } },
+	{ MODKEY,                        XK_space,           spawn,                  {.v = dmenucmd } },
+	{ MODKEY|ShiftMask,              XK_space,           spawn,                  {.v = pwdClipboard } },
+	{ MODKEY|ShiftMask,              XK_c,               spawn,                  {.v = pwdManager} },
+	{ MODKEY,                        XK_Return,          spawn,                  {.v = termcmd } },
+	{ MODKEY|ShiftMask,              XK_s,               spawn,                  {.v = screenshot } },
+	{ MODKEY|ShiftMask,              XK_b,               spawn,                  {.v = toggleblur } },
+	{ MODKEY,                        XK_b,               togglebar,              {0} },
+	{ MODKEY,                        XK_period,          focusstack,             {.i = +1 } },
+	{ MODKEY,                        XK_comma,           focusstack,             {.i = -1 } },
+	{ MODKEY,                        XK_Up,              incnmaster,             {.i = +1 } },
+	{ MODKEY,                        XK_Down,            incnmaster,             {.i = -1 } },
+	{ MODKEY,                        XK_bracketleft,     setmfact,               {.f = -0.01} },
+	{ MODKEY,                        XK_bracketright,    setmfact,               {.f = +0.01} },
+	{ MODKEY|Mod4Mask,               XK_h,               incrgaps,               {.i = +1 } },
+	{ MODKEY|Mod4Mask,               XK_l,               incrgaps,               {.i = -1 } },
+	{ MODKEY|Mod4Mask|ShiftMask,     XK_h,               incrogaps,              {.i = +1 } },
+	{ MODKEY|Mod4Mask|ShiftMask,     XK_l,               incrogaps,              {.i = -1 } },
+	{ MODKEY|Mod4Mask|ControlMask,   XK_h,               incrigaps,              {.i = +1 } },
+	{ MODKEY|Mod4Mask|ControlMask,   XK_l,               incrigaps,              {.i = -1 } },
+	{ MODKEY|Mod4Mask,               XK_0,               togglegaps,             {0} },
+	{ MODKEY|Mod4Mask|ShiftMask,     XK_0,               defaultgaps,            {0} },
+	{ MODKEY,                        XK_y,               incrihgaps,             {.i = +1 } },
+	{ MODKEY,                        XK_o,               incrihgaps,             {.i = -1 } },
+	{ MODKEY|ControlMask,            XK_y,               incrivgaps,             {.i = +1 } },
+	{ MODKEY|ControlMask,            XK_o,               incrivgaps,             {.i = -1 } },
+	{ MODKEY|Mod4Mask,               XK_y,               incrohgaps,             {.i = +1 } },
+	{ MODKEY|Mod4Mask,               XK_o,               incrohgaps,             {.i = -1 } },
+	{ MODKEY|ShiftMask,              XK_y,               incrovgaps,             {.i = +1 } },
+	{ MODKEY|ShiftMask,              XK_o,               incrovgaps,             {.i = -1 } },
+	{ MODKEY|ShiftMask,              XK_Return,          zoom,                   {0} },
+	{ MODKEY,                        XK_s,               togglesticky,           {0} },
+	{ MODKEY,                        XK_9,               view,                   {0} },
+	{ MODKEY,                        XK_c,               killclient,             {0} },
+	{ MODKEY,                        XK_1,               setlayout,              {.v = &layouts[0]} },
+	{ MODKEY,                        XK_2,               setlayout,              {.v = &layouts[1]} },
+	{ MODKEY,                        XK_3,               setlayout,              {.v = &layouts[2]} },
+	{ MODKEY,                        XK_4,               setlayout,              {0} },
+	{ MODKEY|ShiftMask,              XK_f,               togglefloating,         {0} },
+	// { MODKEY,                        XK_0,               view,                   {.ui = ~0 } },
+	// { MODKEY|ShiftMask,              XK_0,               toggletag,              {.ui = ~0 } },
+	{ MODKEY,                        XK_KP_Left,         focusmon,               {.i = -1 } },
+	{ MODKEY,                        XK_KP_Right,        focusmon,               {.i = +1 } },
+	{ MODKEY|ShiftMask,              XK_KP_Left,         tagmon,                 {.i = -1 } },
+	{ MODKEY|ShiftMask,              XK_KP_Right,        tagmon,                 {.i = +1 } },
+	TAGKEYS(                         XK_u,               0)
+	TAGKEYS(                         XK_i,               1)
+	TAGKEYS(                         XK_o,               2)
+	TAGKEYS(                         XK_p,               3)
+	TAGKEYS(                         XK_h,               4)
+	TAGKEYS(                         XK_j,               5)
+	TAGKEYS(                         XK_k,               6)
+	TAGKEYS(                         XK_l,               7)
+	TAGKEYS(                         XK_n,               8)
+	{ MODKEY|ShiftMask,              XK_q,               quit,                   {0} },
+};
+#+end_src
+
+* BUTTON DEFINITION
+Defines mouse button actions for interacting with the UI.
+#+begin_src c
+/* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
+static const Button buttons[] = {
+	/* click                event mask      button          function        argument */
+	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
+	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
+	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
+	{ ClkStatusText,        0,              Button2,        spawn,          {.v = termcmd } },
+	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
+	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
+	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
+	{ ClkTagBar,            0,              Button1,        view,           {0} },
+	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
+	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
+	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+};
+#+end_src

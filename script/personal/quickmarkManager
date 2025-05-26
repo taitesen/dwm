@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+destination="/home/$USER/.quickmarks"
+
+if [[ ! -f "$destination" ]]; then
+    touch "$destination"
+fi
+
+mapfile -t shortcuts < <(awk '{ print $1 }' "$destination")
+
+while true; do
+    read -p "Enter quick mark key: " input
+
+    if [[ " ${shortcuts[@]} " =~ " ${input} " ]]; then
+        echo "$input already exists. Try another."
+    else
+        break
+    fi
+done
+
+read -p "Enter website: " website
+
+output="$input $website"
+echo "$output" >>"$destination"
