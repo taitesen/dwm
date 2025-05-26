@@ -40,7 +40,7 @@ yay -S --noconfirm ueberzugpp vesktop-bin picom-git libva-nvidia-driver-git
 
 # Copying config files
 cd "$OG_PATH/dotfiles/config/" || exit
-cp -r ".fehbg" ".tmux.conf" ".xinitrc" ".Xresources" ".zprofile" "$HOME"
+cp -r ".fehbg" ".zprofile" "$HOME"
 
 config_items=(
     "bat"

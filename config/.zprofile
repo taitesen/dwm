@@ -8,9 +8,13 @@ export EDITOR="nvim"
 export BROWSER="zen-browser"
 export READER="zathura"
 
+export TMUX_CONFIG_HOME="$HOME/Vaults/git/dotfiles/config/tmux/config/"
+
 export BAT_THEME="rose-pine-moon"
 export WEZTERM_CONFIG_FILE="$HOME/Vaults/git/dotfiles/config/wezterm/wezterm.lua"
 export ZDOTDIR="$HOME/Vaults/git/dotfiles/config/zsh"
+export XINITRC="$HOME/Vaults/git/dotfiles/config/.xinitrc"
+export XRESOURCES="$HOME/Vaults/git/dotfiles/config/.Xresources"
 export ds=$HOME/Vaults/git/dataStructure
 export dot=$HOME/Vaults/git/dotfiles
 export socket=$HOME/Vaults/git/socket

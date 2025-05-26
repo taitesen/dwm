@@ -20,11 +20,14 @@ alias ls='eza -x --color=always --icons=always --no-quotes'
 alias la='ls -ad .?* --no-quotes --group-directories-first'
 alias tree='lt --no-quotes'
 alias refresh='xset r rate 300 60; source $dot/config/zsh/.zshrc ~/.zprofile; xrdb ~/.Xresources'
-alias nvim='XDG_CONFIG_HOME=/home/taitesen/Vaults/git nvim'
 alias list='fc-list | sed -e "s/^[^:]*://g"'
 alias gd='git diff --color-moved'
 alias gl="git log --all --graph --pretty=format:'%C(magenta)%h%C(white) %an %ar%C(auto) %D%n%s%n'"
 alias update-mirror='sudo reflector --latest 10 --sort rate --save /etc/pacman.d/mirrorlist'
+
+# very important
+alias nvim='XDG_CONFIG_HOME=/home/taitesen/Vaults/git nvim'
+alias tmux='tmux -f "$TMUX_CONFIG_HOME/tmux.conf"'
 
 bindkey -e
 
