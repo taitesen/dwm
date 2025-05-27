@@ -29,7 +29,7 @@ static const unsigned int alphas[SchemeLast][2] = {
 static unsigned int lines = 0;
 
 /* -h option; minimum height of a menu line */
-static unsigned int lineheight = 15;
+static unsigned int lineheight = 35;
 static unsigned int min_lineheight = 0;
 
 /*
