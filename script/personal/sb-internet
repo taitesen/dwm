@@ -5,6 +5,6 @@ blue="#7894ab"
 light="#9ccfd8"
 brown="#bbac9b"
 case "$(cat /sys/class/net/wl*/operstate 2>/dev/null)" in
-	up) printf "^c$brown^^B2^ 󰤨 ^d^%s" "^C2^On";;
-	down) printf "^c$brown^^B2^ 󰤭 ^d^%s" "^C2^Off";;
+	up) printf "^c$brown^^B2^ 󰤨 ^d^%s" "^C2^On ";;
+	down) printf "^c$brown^^B2^ 󰤭 ^d^%s" "^C2^Off ";;
 esac
