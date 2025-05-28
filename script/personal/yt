@@ -7,7 +7,7 @@ tput cup 0 $col
 echo "$message"
 tput sgr0
 read -r searchString
-(setsid zen-browser "https://youtube.com/results?search_query=${searchString// /+}" >/dev/null 2>&1 &)
+(setsid firefox "https://youtube.com/results?search_query=${searchString// /+}" >/dev/null 2>&1 &)
 sleep 0.5
 disown
 exit 0

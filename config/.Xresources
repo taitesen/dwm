@@ -1,9 +1,9 @@
 !! Transparency (0-1):
-st.alpha: 0.8
+st.alpha: 0.85
 st.alphaOffset: +0.05
 
 !! Set a default font and font size as below:
-st.font: IosevkaTerm NFP Medium:style=SemiBold:size=20
+st.font: IosevkaTerm NFP Medium:style=SemiBold:size=24
 
 st.termname: st-256color
 st.borderpx: 10

@@ -5,7 +5,7 @@ export PAGER=less
 
 # Default programs
 export EDITOR="nvim"
-export BROWSER="zen-browser"
+export BROWSER="firefox"
 export READER="zathura"
 
 export BAT_THEME="rose-pine-moon"

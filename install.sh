@@ -36,7 +36,7 @@ then
 fi
 
 # Installing additional softwares via yay
-yay -S --noconfirm ueberzugpp vesktop-bin picom-git libva-nvidia-driver-git
+yay -S --noconfirm ueberzugpp vesktop-bin picom-git libva-nvidia-driver-git sioyek
 
 # Copying config files
 cd "$OG_PATH/dotfiles/config/" || exit

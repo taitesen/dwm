@@ -1,18 +1,18 @@
 [global]
-frame_color = "#ebbcba"
+frame_color = "#191719"
 separator_color= frame
 
-font = Terminess Nerd Font 15
+font = FreeSans 14
 
 [urgency_low]
-background = "#000000"
-foreground = "#ebbcba"
+background = "#191719"
+foreground = "#bbac9b"
 
 [urgency_normal]
-background = "#000000"
-foreground = "#ebbcba"
+background = "#191719"
+foreground = "#bbac9b"
 
 [urgency_critical]
-background = "#000000"
-foreground = "#ebbcba"
+background = "#191719"
+foreground = "#bbac9b"
 frame_color = "#ff0000"

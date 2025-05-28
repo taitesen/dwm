@@ -8,7 +8,7 @@ fi
 
 pdf=$(echo "$selected")
 if [ -n "$pdf" ]; then
-    (setsid zathura "$books/$pdf" >/dev/null 2>&1 &)
+    (setsid sioyek "$books/$pdf" >/dev/null 2>&1 &)
     sleep 0.3
     disown
     exit 0
