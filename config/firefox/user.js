@@ -192,8 +192,6 @@ user_pref("browser.display.focus_ring_style", 0);
 user_pref("browser.display.focus_ring_width", 0);
 user_pref("layout.css.prefers-color-scheme.content-override", 2);
 user_pref("browser.privateWindowSeparation.enabled", false); // WINDOWS
-user_pref("svg.context-properties.content.enabled", true); // Fill SVG Color
-user_pref("layout.css.has-selector.enabled", true); // CSS's `:has()` selector
 
 /** COOKIE BANNER HANDLING ***/
 user_pref("cookiebanners.service.mode", 1);

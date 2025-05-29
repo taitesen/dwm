@@ -56,12 +56,12 @@
 }
 
 /* Window control buttons (min, resize and close) */
-.titlebar-buttonbox-container {
+/* .titlebar-buttonbox-container {
   display: flex !important;
   margin-right: 12px !important;
   
  
-}
+} */
 
 
 /* Page back and foward buttons */
