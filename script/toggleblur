@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-filename="/home/taitesen/.config/picom/picom.conf"
+filename="/home/taitesen/Vaults/git/dotfiles/config/picom/picom.conf"
 
 # Check if the files exist or not
 if [ ! -f "$filename" ];then

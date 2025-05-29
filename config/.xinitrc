@@ -36,11 +36,9 @@ fi
 
 setxkbmap us &
 ~/.fehbg &
-/usr/bin/emacs --daemon &
-picom -f &
 dwmblocks &
 xset r rate 300 60 &
-betterbird &
+betterbird --headless &
 
 # Loop
 while true; do

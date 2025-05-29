@@ -18,8 +18,6 @@ python-pip
 python-pynvim
 python-isort
 npm
-zathura
-zathura-pdf-mupdf
 tmux
 meson
 ninja
