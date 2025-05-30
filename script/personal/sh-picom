@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Path to your config file
+CONFIG="/home/taitesen/Vaults/git/dotfiles/config/picom/picom.conf"
+# Log file
+LOGFILE="$HOME/.cache/picom_crash.log"
+# Max number of restarts in one session
+MAX_RESTARTS=10
+# How long to wait between restarts (in seconds)
+SLEEP_DURATION=2
+
+# Counter
+restart_count=0
+
+echo "=== Picom auto-restart script started at $(date) ===" >> "$LOGFILE"
+
+while [ $restart_count -lt $MAX_RESTARTS ]; do
+    echo "[ $(date) ] Starting picom (attempt $((restart_count + 1)))..." >> "$LOGFILE"
+
+    picom --config "$CONFIG" 2>> "$LOGFILE"
+
+    echo "[ $(date) ] Picom crashed or exited. Restarting in $SLEEP_DURATION seconds..." >> "$LOGFILE"
+
+    sleep $SLEEP_DURATION
+    restart_count=$((restart_count + 1))
+done
+
+echo "[ $(date) ] Max restart limit reached. Not restarting anymore." >> "$LOGFILE"
